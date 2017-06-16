@@ -3,7 +3,7 @@ Monica's website
 
 [![Build Status](https://travis-ci.org/monicahq/monicahq.github.io.svg?branch=master)](https://travis-ci.org/monicahq/monicahq.github.io)
 
-This is the marketing site of [Monica](https://monicahq.com), a great friends
+This is the marketing site of [Monica](https://monicahq.com), a great personal relationship
 management system. It's built with Jekyll.
 
 
