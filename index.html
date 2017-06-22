@@ -1,217 +1,251 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Monica - a CRM for your friends and family</title>
+---
+layout: default
+dark_header: dark-background
+---
 
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/app.css">
-    <meta name="description" content="Monica is a tool to manage your interactions with your loved ones, friends and family.">
-    <link rel="author" href="https://twitter.com/djaiss">
-    <meta property="og:title" content="Have better relations with your loved ones. Free Online Personal Relationship Management tool." />
-    <link rel="shortcut icon" href="/assets/img/favicon.png">
-
-    <!-- META COMMON TO ALL -->
-    <meta property="og:url" content="https://monicahq.com" />
-    <meta property="og:site_name" content="Monica" />
-    <meta property="og:description" content="Monica is the first Personal Relationship Management tool that helps you have more meaningful relations with your loved ones." />
-    <meta property="og:title" content="Have better relations with your loved ones. Free Online Personal Relationship Management tool." />
-    <meta property="og:locale" content="en_US" />
-
-    <!-- Social share -->
-    <meta property="og:type" content="website" />
-    <meta property="og:image:type" content="image/png" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta property="og:image" content="https://monicahq.com/assets/img/social_share.png" />
-
-    <!-- META SPECIFIC TO TWITTER -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:creator" content="@djaiss">
-    <meta name="twitter:title" content="Monica">
-    <meta name="twitter:description" content="The first Personal Relationship Management tool">
-    <meta property="og:image" content="https://monicahq.com/assets/img/social_share.png" />
-
-  </head>
-
-    <body class="marketing homepage">
-
-    <div class="top-page">
-      <div class="container">
-        <div class="row">
-          <div class="col-xs-12">
-            <div class="logo">
-              <img src="/assets/img/small-logo.png" alt="Logo">
-            </div>
-
-            <div class="navigation">
-              <a href="https://www.patreon.com/monicahq">Support on Patreon</a>
-              <a href="https://app.monicahq.com/login">Login</a>
-            </div>
-
-            <div class="headline">
-              <h1>Your social memory.</h1>
-              <p>You know all those birthdays you forget? And when you last called your grandmother? When you last had coffee with that ex-colleague? Who did you lend that book to again?</p>
-              <p class="cta">
-                <a href="https://app.monicahq.com/register" class="btn btn-primary">Try Monica</a>
-              </p>
-              <img src="/assets/img/main-screen.png" alt="Main dashboard">
-            </div>
-
-          </div>
+<main class="homepage">
+  <div class="tagline dark-background">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h1>Monica is your private social memory.</h1>
         </div>
       </div>
-    </div>
-
-    <div class="before-sections">
-      <div class="container">
-        <div class="row">
-          <div class="col-xs-12">
-            <h3>Monica makes it easy to remember everything about your friends and family.</h3>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="section-homepage people">
-      <div class="container">
-        <div class="row">
-          <div class="col-xs-12 col-sm-6">
-            <h2>Add important information about people you care about</h2>
-            <p>Do you remember the names of kids of the people you care about? Their birthdays? Or even the name of their significant other? Monica lets you remember them easily.</p>
-          </div>
-          <div class="col-xs-12 col-sm-6 visual">
-            <img src="/assets/img/homepage-important-information.svg" alt="Important information">
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="section-homepage dates">
-      <div class="container">
-        <div class="row">
-          <div class="col-xs-12 col-sm-6 visual">
-            <img src="/assets/img/homepage-important-dates.png" alt="Important dates">
-          </div>
-          <div class="col-xs-12 col-sm-6">
-            <h2>Keep track of important dates</h2>
-            <p>Monica will remind you by email every important dates about each one of your contacts. It can be about an anniversary, or to simply go out with your friend.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="section-homepage activities">
-      <div class="container">
-        <div class="row">
-          <div class="col-xs-12 col-sm-6">
-            <h2>Record all activities done together.</h2>
-            <p>Monica lets you record all the activities you’ve done with your friends, sorted by categories. You’ll always remember the last time that you’ve done something with someone.</p>
-          </div>
-          <div class="col-xs-12 col-sm-6 visual">
-            <img src="/assets/img/homepage-activities.png" alt="Activities">
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="section-homepage features">
-      <div class="container">
-        <div class="row">
-          <div class="col-xs-12">
-            <h3>Here is everything you can do with Monica</h3>
-          </div>
-          <div class="col-xs-12 col-sm-6">
-            <ul>
-              <li>
-                <i class="fa fa-check-square-o" aria-hidden="true"></i> Manage significant others
-              </li>
-              <li>
-                <i class="fa fa-check-square-o" aria-hidden="true"></i> Manage food preferences
-              </li>
-              <li>
-                <i class="fa fa-check-square-o" aria-hidden="true"></i> Important dates about someone
-              </li>
-              <li>
-                <i class="fa fa-check-square-o" aria-hidden="true"></i> Reminders by emails
-              </li>
-            </ul>
-          </div>
-          <div class="col-xs-12 col-sm-6">
-            <ul>
-              <li>
-                <i class="fa fa-check-square-o" aria-hidden="true"></i> Todos and tasks about someone
-              </li>
-              <li>
-                <i class="fa fa-check-square-o" aria-hidden="true"></i> Gifts management
-              </li>
-              <li>
-                <i class="fa fa-check-square-o" aria-hidden="true"></i> Record activities done with someone
-              </li>
-              <li>
-                <i class="fa fa-check-square-o" aria-hidden="true"></i> Information about their children
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="why">
-      <div class="container">
-        <div class="row">
-          <div class="col-xs-12">
-            <h3>Why Monica?</h3>
-            <p>Monica is for people who have jobs, a family and are busy trying to find a good work/life balance. We are so busy, that we don’t have time anymore to remember to call a friend, say happy birthday to a nephew, or remember to invite someone special to come eat dinner next week. The older we get, the more life gets in the way. It’s sad, but it’s just a matter of priorities. I’ve created Monica to help these people.</p>
-            <p>Monica is not for everyone. It’s probably not targeted at people who see their friends every day and have a super busy social life.</p>
-            <p>Monica is not a social network. It’s not Facebook. It’s for your eyes only.</p>
-            <p>Monica is the first real Personal Relationship Management out there.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="section-homepage try">
-      <div class="container">
-        <div class="row">
-          <div class="col-xs-12">
-            <h3>Ready to get started?</h3>
-            <p>
-              <a href="https://app.monicahq.com/register" class="btn btn-primary">Try Monica</a>
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="container footer-marketing">
-  <div class="row">
-    <div class="col-xs-12">
-      Created in Montreal, Quebec by <a href="https://twitter.com/djaiss">Régis Freyd</a>
-      <a href="/privacy.html">Privacy policy</a>
-      <a href="/changelog.html">Release notes</a>
-      <a href="https://github.com/monicahq/monica">GitHub</a>
-      <a href="https://tinyletter.com/monicahq">Newsletter</a>
-      <a href="https://twitter.com/MonicaHQ_app">Official Twitter account</a>
-      <a href="https://www.patreon.com/monicahq">Support on Patreon</a>
     </div>
   </div>
-</div>
 
-<script src="https://use.fontawesome.com/e7fdb4112b.js"></script>
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  <div class="main-screenshot">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+        </div>
+      </div>
+    </div>
+  </div>
 
-  ga('create', 'UA-86013324-1', 'auto');
-  ga('send', 'pageview');
+  <section class="motivation">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <p class="centered-paragraph">You know all those birthdays you forget? And when you last called your grandmother? When you last had coffee with that ex-colleague? Who did you lend that book to again?</p>
+          <p class="centered-paragraph">In today’s crazy world, it’s barely impossible to keep track of what  people important to you are doing with their lives.</p>
+          <h2>Monica solves this problem.</h2>
+          <p class="centered-paragraph">We are a Personal Relationship Management (PRM) system, designed to help you have more meaningful relationships with people who matters.</p>
+          <ul class="centered-paragraph">
+            <li>You won't <span class="highlight">forget important information</span> anymore about your loved ones.</li>
+            <li>You’ll have <span class="highlight">one central place</span> to store information, accessible from everywhere.</li>
+            <li>Monica is <span class="highlight">so simple to use</span>, your grandfather would understand it.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
 
-</script>
-  </body>
+  <section class="create-account dark-background">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h2>Create your account for free</h2>
+          <p>The free-forever plan is more than generous, with unlimited contacts.</p>
+          <p class="stats">
+            More than 7,000 persons are using the tool today to improve their social lives. Join them.
+          </p>
+          <div class="big-cta">
+            <a href="https://app.monicahq.com" class="btn btn-primary btn-large">Create your account</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-</html>
+  <section class="how">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h2>How does Monica help you build more meaningful relationships?</h2>
+          <div class="illustration">
+            <img alt="Image" src="{{ "/assets/img/homepage/how.png" | prepend: site.baseurl | prepend: site.url }}">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-6 col-12-sm">
+          <div class="feature">
+            <h3>Record important information</h3>
+            <p>Add job information, child and significant other names and birthdates, address, social profiles. Even food preferences.</p>
+          </div>
+          <div class="feature">
+            <h3>Add reminders and manage tasks</h3>
+            <p>Get reminded of the important dates, either from dates automatically added like birthdates, or dates that you’ve entered yourself. Monica also comes with a personal task manager that helps you keep track of stuff about your contacts.</p>
+          </div>
+        </div>
+        <div class="col-6 col-12-sm">
+          <div class="feature">
+            <h3>Remember activities done together</h3>
+            <p>Want to remember the last time you’ve done something interesting with your friend, and when you’ve done it?</p>
+          </div>
+          <div class="feature">
+            <h3>Never forget a gift or a debt</h3>
+            <p>Keep track of which gift you’ve offered to your friend’s child for her 8th birthday. Or gift ideas that you have for Paul’s spouse next year. Monica also lets you manage debts that you owe to someone, or that this person owes to you.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="who">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h2>Who Monica is for?</h2>
+          <p class="subheader">A few real-life examples on who actually use Monica to improve their lives.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-4">
+          <h3>People suffering from Alzheimer</h3>
+          <p>Alzheimer is a terrible disease, characterized by memory loss. Because Monica lets you record everything about the people you love, people with Alzheimer are able to keep a record of who's who, and what they've done with them.</p>
+        </div>
+        <div class="col-4">
+          <h3>People with very busy lives</h3>
+          <p>Like most, these people care a lot about their loved ones, but they are so busy that they are afraid to miss important details about their contacts. Monica will help remember the good</p>
+        </div>
+        <div class="col-4">
+          <h3>People with Asperger syndrom</h3>
+          <p>Asperger syndrom is a subtype of autism, that amongst other things, affect social interactions. Monica helps people suffering from this to maintain relationships with the ones they love.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="simple-available">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h2>Monica is really simple to use and available from anywhere.</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-6">
+          <p>There is no need for a manual. Sign in, add your contacts, add the information about them. That’s it.</p>
+          <p>Access Monica from any computer, or mobile phones. Anywhere you’ll go, you’ll have the information about your loved ones next to where you are.</p>
+        </div>
+        <div class="col-6">
+        <img alt="Image" src="{{ "/assets/img/homepage/map.png" | prepend: site.baseurl | prepend: site.url }}">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="open-source">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h2>Monica is open-source and has a great community around it.</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-6">
+          <p>Monica is not only based on great open-source tools - <strong>it is open-source itself</strong>. That means the code is freely <a href="https://github.com/monicahq/monica">available on GitHub</a>.</p>
+        </div>
+        <div class="col-6">
+          <p>The benefits are huge. The code gets scrutinized by thousands of eyes. Bugs are fixed faster. Features are more solid.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <p class="centered-paragraph">From <a href="">our roadmap</a> to our <a href="">issue tracker</a>, everything we do is opened to public eyes. We believe that transparency will make a difference on the long run.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="why">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h2>Why Monica?</h2>
+          <p class="centered-paragraph">Monica is for people who have jobs, a family and are busy trying to find a good work/life balance. So busy, that they don’t have time anymore to remember to call a friend, say happy birthday to a nephew, or remember to invite someone special to come eat dinner next week. The older we get, the more life gets in the way. It’s sad, but it’s just a matter of priorities. I’ve created Monica to help these people.</p>
+          <p class="centered-paragraph">Monica is not for everyone. It’s probably not targeted at people who see their friends every day and have a super busy social life.</p>
+          <p class="centered-paragraph">Monica is not a social network. <strong>It's not Facebook</strong>. It's for your eyes only.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="installation">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h2>Use our hosted version, or host it yourself.</h2>
+          <p class="centered-paragraph"><span class="highlight">We deeply care about privacy</span>. If you prefer to be in total control of your data, install Monica on a server that you own.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-3">
+          <div class="box">
+            <div class="installation-image">
+              <img alt="Image" src="{{ "/assets/img/homepage/big-logo.png" | prepend: site.baseurl | prepend: site.url }}">
+            </div>
+            <h4>We host it for you</h4>
+            <p class="instructions">
+              <a href="https://app.monicahq.com" class="btn">Signup</a>
+            </p>
+            <p>We take care of installing and patching Monica for you. Create your account  and enjoy.</p>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="box">
+            <div class="installation-image">
+              <img alt="Image" src="{{ "/assets/img/homepage/homestead.png" | prepend: site.baseurl | prepend: site.url }}">
+            </div>
+            <h4>Use Homestead</h4>
+            <p class="instructions">
+              <a href="https://github.com/monicahq/monica/blob/master/docs/installation/generic.md" class="btn">Instructions</a>
+            </p>
+            <p>Laravel Homestead is an official, pre-packaged Vagrant box that provides you a wonderful development environment.</p>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="box">
+            <div class="installation-image">
+              <img alt="Image" src="{{ "/assets/img/homepage/heroku.png" | prepend: site.baseurl | prepend: site.url }}">
+            </div>
+            <h4>Deploy on Heroku</h4>
+            <p class="instructions">
+              <a href="https://github.com/monicahq/monica/blob/master/docs/installation/heroku.md" class="btn">Instructions</a>
+            </p>
+            <p>We provide a one-click installer on Heroku.</p>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="box">
+            <div class="installation-image">
+              <img alt="Image" src="{{ "/assets/img/homepage/docker.png" | prepend: site.baseurl | prepend: site.url }}">
+            </div>
+            <h4>Deploy with Docker</h4>
+            <p class="instructions">
+              <a href="https://github.com/monicahq/monica/blob/master/docs/installation/docker.md" class="btn">Instructions</a>
+            </p>
+            <p>Docker lets you install Monica easily, with very little configuration.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="register">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h2>Ready to try?</h2>
+          <p>Join the thousands of people already using Monica to enhance the quality of their social relationships.</p>
+          <p class="cta">
+            <a href="https://app.monicahq.com" class="btn btn-primary btn-large">Sign up for Monica</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>

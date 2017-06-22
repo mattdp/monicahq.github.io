@@ -1,0 +1,42 @@
+<footer class="dark-background">
+  <div class="container">
+    <div class="row">
+      <div class="col-3">
+        <div class="logo-footer">
+          <img alt="Image" src="{{ "/assets/img/logo.png" | prepend: site.baseurl | prepend: site.url }}">
+        </div>
+        <p>©2016-2017 Monica</p>
+        <p>All rights reserved.</p>
+        <p>Crafted in Montréal.</p>
+        <p>By <a href="https://twitter.com/djaiss">Régis Freyd</a>.</p>
+      </div>
+      <div class="col-3">
+        <h4>About</h4>
+        <ul>
+          <li><a href="{{ "/changelog" | prepend: site.baseurl | prepend: site.url }}">Release notes</a></li>
+          <li><a href="{{ "/privacy" | prepend: site.baseurl | prepend: site.url }}">Privacy policy</a></li>
+          <li><a href="{{ "/terms" | prepend: site.baseurl | prepend: site.url }}">Terms of use</a></li>
+        </ul>
+      </div>
+      <div class="col-3">
+        <h4>Learn more</h4>
+        <ul>
+          <li><a href="https://tinyletter.com/monicahq">Weekly newsletter</a></li>
+          <li><a href="{{ "/blog" | prepend: site.baseurl | prepend: site.url }}">Blog</a></li>
+          <li><a href="https://twitter.com/MonicaHQ_app">Twitter</a></li>
+          <li><a href="https://github.com/monicahq/monica">Source code on GitHub</a></li>
+        </ul>
+      </div>
+      <div class="col-3">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:{{ site.email | encode_email }}">Support via email</a></li>
+          <li><a href="https://github.com/monicahq/monica/issues">Submit issue on GitHub</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script crossorigin="anonymous" src="{{ "/assets/js/jquery.min.js" | prepend: site.baseurl | prepend: site.url }}"></script>
+<script crossorigin="anonymous" src="{{ "/assets/js/hamburger.js" | prepend: site.baseurl | prepend: site.url }}"></script>

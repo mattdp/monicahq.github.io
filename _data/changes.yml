@@ -1,0 +1,185 @@
+- date: 2017-06-16
+  list-changes:
+      - change: Add automatic reminders when setting a birthdate When adding a birthdate (contact, kid, significant other). When updating or deleting the person, the reminder will be changed accordingly.
+
+- date: 2017-06-15
+  list-changes:
+      - change: Add reminder automatically when you set the birthdate of a contact.
+      - change: Add timezone for Switzerland.
+
+- date: 2017-06-14
+  list-changes:
+      - change: Add ability to edit a note.
+      - change: Add ability to edit a debt.
+      - change: Add support for South African ZAR currency.
+
+- date: 2017-06-13
+  list-changes:
+      - change: Add job information and company name for your contacts.
+      - change: Gifts now display comments if defined, as well as who the gift is for.
+
+- date: 2017-06-12
+  list-changes:
+      - change: Add Export to SQL feature, under Settings > Export data.
+      - change: You can now deploy your own instance to Heroku if you want to host the application yourself using a one-click button.
+
+- date: 2017-06-10
+  list-changes:
+      - change: Add support for other currencies (CAD $, EUR €, GBP £, RUB ₽) for the gifts and debts section. This is set in the User setting. Default is USD $.
+      - change: Add ability to define main social network accounts to a contact (Facebook, Twitter, LinkedIn).
+
+- date: 2017-06-09
+  list-changes:
+      - change: Add Russian translation.
+      - change: Add Portuguese (Brazil) translation.
+
+- date: 2017-06-08
+  list-changes:
+      - change: Dramatically reduce the number of queries necessary to load the list of contacts on the People's tab.
+      - change: Phone number are now treated like a string and not integers on the front-end side.
+      - change: Add Gravatar support for contacts with no photos.
+      - change: Fix US typos.
+
+- date: 2017-06-07
+  list-changes:
+    - change: Add ability to delete a contact
+    - change: Add third gender option Rather not say, along with Man and Woman. This new field is also the default option when adding someone.
+    - change: Add ability to disable signups entirely in a Monica instance (useful for self-hosted solution) with an env variable set in .env file.
+    - change: Google Analytics and Intercom scripts are now not printed if env variables are not set for them.
+    - change: Fix some grammar errors.
+    - change: When seeding the database, the countries table is now truncated.
+    - change: Contact page now shows in the title HTML tag the name of the person so it's easier to see in the browser with multiple opened tabs.
+
+- date: 2017-06-06
+  list-changes:
+    - change: Thanks to the community, a lot of bugs have been solved already. More fixes will be submitted soon.
+    - change: Remove age limitation when adding the birthdate of someone (significan other, contact, kid).
+    - change: Posted on Hacker News. I got a shit load of traffic and new users, and a lot of bugs that I will need to fix very quickly. Thanks for trying me out, and thanks for all the kind words.
+
+- date: 2017-06-05
+  list-changes:
+    - change: Add a new dashboard that displays more useful information (not mobile optimized at the moment).
+
+- date: 2017-06-02
+  list-changes:
+    - change: Simplify the list of users.
+
+- date: 2017-05-30
+  list-changes:
+    - change: You can now manage debts - money you've borrowed from friends, or money they owe you.
+
+- date: 2017-05-29
+  list-changes:
+    - change: Change how reminders work.
+    - change: When adding a kid or significant other's birthdates, a reminder is now automatically created.
+
+- date: 2017-05-03
+  list-changes:
+    - change: Force HTTPS on all page load.
+    - change: The marketing site is now on a different server and has been moved out from the main application.
+    - change: Refactor of how child are managed for a given contact. I hope I've fixed most bugs around this part.
+
+- date: 2017-05-02
+  list-changes:
+    - change: Change the structure of the page when viewing a contact.
+
+- date: 2017-02-15
+  list-changes:
+    - change: Add reminders for the next 30 days on the dashboard.
+
+- date: 2017-02-14
+  list-changes:
+    - change: Add counters in all tabs in the contact view.
+    - change: Localize multiple terms that were not in the translation system.
+
+- date: 2017-02-13
+  list-changes:
+    - change: Adding a note is now done on a separate page.
+
+- date: 2017-02-12
+  list-changes:
+    - change: Add a personal diary feature.
+
+- date: 2017-02-11
+  list-changes:
+    - change: Add a search bar to contact list.
+    - change: Add ability to add photos to contacts.
+
+- date: 2017-02-10
+  list-changes:
+    - change: Major rewrite (again). This change was needed to add unit tests to the application. Most of the code is now tested automatically. I hope you will encounter less bugs from now on.
+    - change: The application is now open source.
+    - change: Slight redesign of the contact view.
+    - change: Redesign of the contact list.
+
+- date: 2017-01-14
+  list-changes:
+    - change: Contacts have now their own avatars, composed of their initials.
+
+- date: 2017-01-02
+  list-changes:
+    - change: New marketing website. Happy new year.
+
+- date: 2016-12-27
+  list-changes:
+    - change: Add a newsletter. Please subscribe to be informed of what's new, straight in your inbox.
+
+- date: 2016-12-25
+  list-changes:
+    - change: Add a better list of contacts. The list is now sortable and searchable.
+    - change: Add a better layout on mobile for the header.
+
+- date: 2016-12-22
+  list-changes:
+    - change: Add gift management. You can now track gifts you would like to offer to someone, or gifts you already offered.
+    - change: Fix a bug about the display of number of kids in the People list
+
+- date: 2016-12-12
+  list-changes:
+    - change: Add French translation. The translation system is now in place and I'll be able to translate the application in any language from now on.
+
+- date: 2016-12-09
+  list-changes:
+    - change: Add first version of the dashboard. The second version will add statistics.
+
+- date: 2016-12-06
+  list-changes:
+    - change: Major redesign of the application. It took me a lot of time. This will allow to add features more easily.
+
+- date: 2016-10-28
+  list-changes:
+    - change: Add encryption for all the data in the database. If the database is stolen or the information leaked, data are unreadable without the encryption key.
+
+- date: 2016-10-26
+  list-changes:
+    - change: Add weather information for the city the contact lives in
+    - change: Add ability to set an address for a contact
+
+- date: 2016-10-25
+  list-changes:
+    - change: Add better support for using Monica on your mobile phone. It should work better now.
+
+- date: 2016-10-23
+  list-changes:
+    - change: Add better icons in the application. I'll add more icons in the coming days to add more life to the interface.
+
+- date: 2016-10-22
+  list-changes:
+    - change: When you delete your account, it now truly deletes it completely from the database. No possible recoveries.
+    - change: Add public statistics page.
+
+- date: 2016-10-20
+  list-changes:
+    - change: Add ability to define food preferences
+    - change: Add ability to choose between a full width layout or a smaller one (activated through Settings page).
+    - change: Add ability to update the name of a contact.
+    - change: Add privacy policy page.
+
+- date: 2016-10-14
+  list-changes:
+    - change: Add ability to delete account.
+    - change: Add release notes page.
+
+- date: 2016-10-09
+  list-changes:
+    - change: First release of Monica to the public after months of hard work.
