@@ -1,3 +1,12 @@
+- date: 2017-06-29
+  list-changes:
+      - change: Add import from vCard (or .vcf) in the Settings panel.
+      - change: Add ability to reset account. Resetting an account will remove everything - but won't close the account like deletion would.
+
+- date: 2017-06-24
+  list-changes:
+      - change: On the people's tab, filters are now placed above the table.
+
 - date: 2017-06-22
   list-changes:
       - change: Add ability to define name order (Firstname Lastname or Lastname Firstname) in the Settings panel.
