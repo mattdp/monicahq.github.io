@@ -22,14 +22,24 @@ layout: single_article
     </div>
 
    <div class="row">
-      <div class="col-12">
+      <div class="col-9">
         <article>
           <h1>{{ page.title }}</h1>
-          <p class="date">{{ page.date | date: '%B %d, %Y' }}</p>
+          <p class="article-metadata">
+            <span class="date">Written {{ page.date | date: '%B %d, %Y' }}.</span>
+            <span class="category">Flagged under
+              <a href="{{ page.tag_for_seo | prepend: '/category/' | prepend: site.baseurl | prepend: site.url }}">
+                {{ page.tags }}
+              </a>
+            </span>
+          </p>
           <div class="content">
             {{ page.content }}
           </div>
         </article>
+      </div>
+      <div class="col-3">
+        {% include categories.html %}
       </div>
     </div>
 
