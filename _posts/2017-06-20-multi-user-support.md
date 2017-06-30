@@ -2,6 +2,7 @@
 layout: post
 title: Introducing multi-user support
 date: 2017-06-20
+description: Monica now supports multi-users in the same account.
 category:
 ---
 

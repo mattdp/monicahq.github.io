@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Do you need to import your data?
-description:
+description: You probably don't need to keep track of social interactions with 500+ friends.
 date: 2017-06-26
 tags:
 ---
