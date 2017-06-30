@@ -4,6 +4,7 @@ title: Do you need to import your data?
 description: You probably don't need to keep track of social interactions with 500+ friends.
 date: 2017-06-26
 tags: PRM
+tag_for_seo: prm
 ---
 
 The two most requested features on Monica so far are:
