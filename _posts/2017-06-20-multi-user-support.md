@@ -3,7 +3,7 @@ layout: post
 title: Introducing multi-user support
 date: 2017-06-20
 description: Monica now supports multi-users in the same account.
-category:
+tags: Product
 ---
 
 Monica is meant to host all the private information about your contacts. By

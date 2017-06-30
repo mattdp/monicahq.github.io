@@ -3,7 +3,7 @@ layout: post
 title: Why open source? Are you crazy?
 description: The pros and cons of open sourcing your consumer product.
 date: 2017-06-29
-tags:
+tags: Growth
 ---
 
 A lot of people have sent me emails about why Monica is open source. There are

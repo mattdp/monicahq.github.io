@@ -294,56 +294,57 @@ a {
   }
 
   article {
-    border: 1px solid #eee;
-    border-radius: 4px;
     margin-bottom: 50px;
-    padding: 30px;
 
     h1 {
       font-weight: normal;
       margin-bottom: 5px;
-
-      a {
-        text-decoration: none;
-        color: #283C46;
-
-        &:hover {
-          background-color: transparent;
-          border-bottom: 1px solid #eee;
-        }
-      }
+      margin-top: 0;
+      font-size: 25px;
+      text-align: left;
     }
 
-    ul {
-      margin: 0 auto 15px;
-      width: 550px;
-
-      li {
-        margin-bottom: 10px;
-      }
+    p, li {
+      font-size: 16px;
+      line-height: 27px;
+      font-weight: normal;
     }
 
     p {
-      width: 550px;
-      margin: 0 auto 15px;
-
       &.date {
-        text-align: center;
         margin-bottom: 20px;
+        margin-top: 0;
+        font-size: 15px;
       }
     }
 
     h2 {
       text-align: left;
       font-size: 25px;
-      width: 550px;
-      margin: 40px auto 15px;
+      margin: 40px 0 15px;
     }
 
     img {
       border: 1px solid #eee;
       padding: 5px;
       max-width: 100%;
+    }
+  }
+
+  .categories {
+    border: 1px solid #eee;
+    border-radius: 3px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      padding: 6px 10px;
+      font-size: 16px;
+    }
+
+    li:not(:last-child) {
+      border-bottom: 1px solid #eee
     }
   }
 
