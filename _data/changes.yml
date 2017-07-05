@@ -1,3 +1,13 @@
+- date: 2017-07-04
+  list-changes:
+      - change: Add supprort for organizing people into tags.
+      - change: Add ability to filter contacts per tags on the contact list.
+
+- date: 2017-07-02
+  list-changes:
+      - change: Update the design of the latest actions on the dashboard.
+      - change: Speed up the display of the contact lists when there is a lot of contacts in the account.
+
 - date: 2017-06-29
   list-changes:
       - change: Add import from vCard (or .vcf) in the Settings panel.
