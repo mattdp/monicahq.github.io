@@ -1,3 +1,15 @@
+- date: 2017-08-14
+  list-changes:
+      - change: Add ability to set significant other and kids as "real" contacts and not partial contacts.
+      - change: Add Italian translation.
+      - change: Add German translation.
+      - change: Add debt total below a contacts debt.
+      - change: Add world currencies.
+
+- date: 2017-07-25
+  list-changes:
+      - change: Add ability to search various fields in contacts through the top-nav search.
+
 - date: 2017-07-18
   list-changes:
       - change: Add Indian rupee currency.
