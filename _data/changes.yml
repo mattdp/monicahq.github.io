@@ -1,3 +1,7 @@
+- date: 2017-08-15
+  list-changes:
+      - change: Add support for Markdown on Notes and Log Calls.
+
 - date: 2017-08-14
   list-changes:
       - change: Add ability to set significant other and kids as "real" contacts and not partial contacts.
