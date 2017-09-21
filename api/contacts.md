@@ -14,9 +14,15 @@ are two types of contacts:
 * `real` contacts
 * `partial` contacts.
 
-A `real` contact is a contact that you have a lot of information about - therefore you can attach activities, reminders, notes, etc... to the object. Real contacts have their own contact sheet.
+A `real` contact is a contact that you have a lot of information about -
+therefore you can attach activities, reminders, notes, etc... to the object.
+Real contacts have their own contact sheet.
 
-A `partial` contact, however, is a person you don't have a lot of information about. This is typically the spouse of one of your friend, or their child for whom you only need to remember the names and the date of birth. A `partial` contact is always linked to a `real` contact. Partial contacts don't have their own contact sheet and shouldn't have one.
+A `partial` contact, however, is a person you don't have a lot of information
+about. This is typically the spouse of one of your friend, or their child for
+whom you only need to remember the names and the date of birth. A `partial`
+contact is always linked to a `real` contact. Partial contacts don't have their
+own contact sheet and shouldn't have one.
 
 A `partial` contact has the flag `is_partial` set to `true`.
 

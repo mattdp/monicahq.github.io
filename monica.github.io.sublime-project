@@ -1,0 +1,25 @@
+{
+    "folders":
+    [
+        {
+            "path": ".",
+            "folder_exclude_patterns":
+            [
+                "node_modules",
+            ],
+            "folder_include_patterns":
+            [
+                "vendor",
+                "assets/vendor"
+            ],
+        }
+    ],
+    "settings":
+    {
+    },
+    "build_systems":
+    [
+        {
+        }
+    ]
+}

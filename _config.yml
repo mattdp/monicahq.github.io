@@ -27,6 +27,8 @@ highlighter: rouge
 
 # Build settings
 markdown: kramdown
+sass:
+  style: compressed
 gems:
   - jekyll-feed
   - jekyll-sitemap
