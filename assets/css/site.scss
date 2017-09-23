@@ -1,11 +1,67 @@
 ---
 ---
 
-@import 'tachyons.min';
+@import 'bootstrap.min';
+
+.bg-blue {
+  background-image: linear-gradient(-180deg, #1B2B57 0%, #4F8DBE 100%);
+}
+
+footer {
+  background-color: #051b36;
+}
+
+.white {
+  color: #fff;
+}
+
+.font-weight-light {
+  font-weight: 100;
+}
+
+.btn-primary {
+  background: #5aa111;
+  border-color: #5aa111;
+  border-radius: 5px;
+  font-weight: 100;
+}
+
+.footer {
+  .footer-small {
+    font-size: 11px;
+  }
+}
 
 .homepage {
   main {
-    background-image: linear-gradient(-180deg, #1B2B57 0%, #4F8DBE 100%);
+    height: 720px;
+    margin-bottom: 120px;
   }
 
+  .main-content {
+    h1 {
+      font-size: 22px;
+      font-weight: 100;
+      line-height: 30px;
+    }
+
+    h2 {
+      font-size: 16px;
+      font-weight: 100;
+      line-height: 25px;
+    }
+
+    h3 {
+      font-size: 24px;
+    }
+
+    h4 {
+      font-size: 20px;
+    }
+  }
+
+  .things {
+    border: 1px solid #d9d9d9;
+    border-radius: 3px;
+  }
 }
