@@ -282,7 +282,7 @@
             <a class="inverted" href="{{ "/terms" | prepend: site.baseurl | prepend: site.url }}">Terms of use</a>
           </li>
           <li class="mb-2">
-            <a class="inverted" href="{{ "/contact" | prepend: site.baseurl | prepend: site.url }}">Contact</a>
+            <a class="inverted" href="mailto:{{ site.email | encode_email }}">Contact</a>
           </li>
         </ul>
       </div>
@@ -359,3 +359,5 @@
     </div>
   </div>
 </footer>
+
+{% include analytics.html %}

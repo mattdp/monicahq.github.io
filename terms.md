@@ -78,7 +78,7 @@ layout: homepage
         <h3 class="text-center font-weight-normal">Create your account for free</h3>
         <p class="text-center mb-4">Or install Monica on a server that you own</p>
         <div class="text-center mb-3">
-          <a href="#" class="btn btn-primary px-4 py-3">Create account</a>
+          <a href="https://app.monicahq.com" class="btn btn-primary px-4 py-3">Create account</a>
         </div>
         <p class="text-center font-weight-light mb-5">Already trusted by 10,000+ users.</p>
       </div>

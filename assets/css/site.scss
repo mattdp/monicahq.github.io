@@ -293,3 +293,23 @@ footer {
     max-width: 460px;
   }
 }
+
+.blog {
+  article {
+    border: 1px solid $border-color;
+
+    .article-image {
+      img {
+        width: 100%;
+      }
+    }
+
+    .article-excerpt {
+      height: 250px;
+
+      @media only screen and (max-width: 480px) {
+        height: 100%;
+      }
+    }
+  }
+}
