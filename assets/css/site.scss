@@ -138,6 +138,21 @@ footer {
     border: 1px solid $border-color;
     border-radius: 3px;
   }
+
+  .why {
+    p {
+      margin: 0 auto;
+      max-width: 550px;
+    }
+  }
+
+  .laptop {
+    left: 80px;
+    position: relative;
+    top: 13px;
+    transform: rotate(-21deg);
+    width: 175px;
+  }
 }
 
 .pricing {
@@ -185,6 +200,66 @@ footer {
 
     h3 {
       font-size: 18px;
+    }
+  }
+}
+
+.privacy {
+  .privacy-image {
+    background: url(/assets/img/privacy.jpg) no-repeat center center;
+    background-size: cover;
+    height: 400px;
+
+    @media only screen and (max-width: 480px) {
+      height: 300px;
+    }
+  }
+
+  .text {
+    margin: 0 auto;
+    max-width: 550px;
+  }
+}
+
+.terms {
+  .terms-image {
+    background: url(/assets/img/terms.jpg) no-repeat center center;
+    background-size: cover;
+    height: 400px;
+
+    @media only screen and (max-width: 480px) {
+      height: 300px;
+    }
+  }
+
+  .text {
+    margin: 0 auto;
+    max-width: 550px;
+  }
+}
+
+.changelog {
+  .changelog-image {
+    background: url(/assets/img/changelog.jpg) no-repeat center center;
+    background-size: cover;
+    height: 400px;
+
+    @media only screen and (max-width: 480px) {
+      height: 300px;
+    }
+  }
+
+  .promo-box {
+    border: 1px solid $border-color;
+
+    h3 {
+      font-size: 16px;
+    }
+  }
+
+  .changes {
+    h3 {
+      font-size: 20px;
     }
   }
 }
