@@ -3,16 +3,26 @@
 
 @import 'bootstrap.min';
 
+$white: #fff;
+$border-color: #d9d9d9;
+$btn-bg: #5aa111;
+$btn-bg-hover: #598032;
+$bg-color-fix-header: #223864;
+$bg-color-footer: #051b36;
+$bg-color-header-top: #1b2b57;
+$bg-color-header-bottom: #4f8dbe;
+$bg-color-header: linear-gradient(-180deg, $bg-color-header-top 0%, $bg-color-header-bottom 100%);
+
 .bg-blue {
-  background-image: linear-gradient(-180deg, #1B2B57 0%, #4F8DBE 100%);
+  background-image: $bg-color-header;
 }
 
-footer {
-  background-color: #051b36;
+.fix-blue {
+  background-color: $bg-color-fix-header;
 }
 
 .white {
-  color: #fff;
+  color: $white;
 }
 
 .font-weight-light {
@@ -20,27 +30,74 @@ footer {
 }
 
 .btn-primary {
-  background: #5aa111;
-  border-color: #5aa111;
+  background: $btn-bg;
+  border: 0;
   border-radius: 5px;
   font-weight: 100;
+
+  &:hover {
+    background-color: $btn-bg-hover;
+    border: 0;
+  }
 }
 
-.footer {
+.inverted {
+  color: $white;
+
+  &:hover {
+    color: $white;
+  }
+}
+
+.no-bullet {
+  list-style-type: none;
+}
+
+footer {
+  background-color: $bg-color-footer;
+
   .footer-small {
     font-size: 11px;
+    margin-bottom: 0;
+  }
+}
+
+.header {
+  .logo {
+    @media only screen and (max-width: 480px) {
+      text-align: center;
+    }
+  }
+
+  .menu {
+    a {
+      font-size: 15px;
+
+      &.btn {
+        margin-top: -5px;
+      }
+    }
+  }
+
+  .responsive-menu {
+    border-bottom: 1px solid $white;
+    text-align: center;
   }
 }
 
 .homepage {
   main {
-    height: 720px;
+    height: 710px;
     margin-bottom: 120px;
+
+    @media only screen and (max-width: 480px) {
+      height: 580px;
+    }
   }
 
   .main-content {
     h1 {
-      font-size: 22px;
+      font-size: 26px;
       font-weight: 100;
       line-height: 30px;
     }
@@ -61,7 +118,86 @@ footer {
   }
 
   .things {
-    border: 1px solid #d9d9d9;
+    border: 1px solid $border-color;
     border-radius: 3px;
+  }
+}
+
+.pricing {
+  main {
+    height: 570px;
+    margin-bottom: 190px;
+
+    @media only screen and (max-width: 480px) {
+      height: 1110px;
+      margin-bottom: 150px;
+    }
+  }
+
+  .pricing-box {
+    background-color: $white;
+    border: 1px solid $border-color;
+    border-radius: 3px;
+    width: 300px;
+
+    @media only screen and (max-width: 480px) {
+      width: 100%;
+      float: none;
+    }
+  }
+
+  .price-plan {
+    font-size: 40px;
+  }
+
+  .price {
+    font-size: 30px;
+  }
+
+  .faq {
+    h2,
+    h3,
+    p {
+      margin: 0 auto;
+      max-width: 460px;
+    }
+
+    h2 {
+      font-size: 24px;
+    }
+
+    h3 {
+      font-size: 18px;
+    }
+  }
+}
+
+.team {
+  .team-image {
+    background: url(/assets/img/team.jpg) no-repeat center center;
+    background-size: cover;
+    height: 600px;
+
+    @media only screen and (max-width: 480px) {
+      height: 300px;
+    }
+  }
+
+  .summary {
+    border: 1px solid $border-color;
+    border-radius: 3px;
+
+    div:not(:last-child) {
+      border-right: 1px solid $border-color;
+    }
+
+    p {
+      font-size: 13px;
+    }
+  }
+
+  .bio {
+    margin: 0 auto;
+    max-width: 460px;
   }
 }
