@@ -2,61 +2,34 @@
 layout: single_article
 ---
 
-<main class="blog post">
+<div class="post">
+  <main class="fix-blue">
+    <div class="pt-3 pt-sm-3 mb-5">
+      {% include menu.html %}
+    </div>
+  </main>
 
   <div class="container">
     <div class="row">
-      <div class="col-12">
-        <div class="blog-header">
-          <h2><a href="{{ "/blog" | prepend: site.baseurl | prepend: site.url }}">← Read the rest of our blog</a></h2>
-          <ul class="horizontal">
-            <li>
-              <a href="https://twitter.com/MonicaHQ_app">Follow Monica on Twitter</a>
-            </li>
-            <li>
-              <a href="https://tinyletter.com/monicahq">Subscribe to the newsletter</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-   <div class="row">
-      <div class="col-9">
-        <article>
-          <h1>{{ page.title }}</h1>
+      <div class="col">
+        <div class="post-content">
+          <h2 class="font-weight-normal">{{ page.title }}</h2>
           <p class="article-metadata">
             <span class="date">Written {{ page.date | date: '%B %d, %Y' }}.</span>
-            <span class="category">Flagged under
+            <!-- <span class="category">Flagged under
               <a href="{{ page.tag_for_seo | prepend: '/category/' | prepend: site.baseurl | prepend: site.url }}">
                 {{ page.tags }}
               </a>
-            </span>
+            </span> -->
           </p>
+          <div class="post-image mb-5">
+            <img class="mw-100" src="{{ page.date | date: '%Y-%m-%d' | append: '.jpeg' | prepend: '/assets/img/posts/' | prepend: site.baseurl | prepend: site.url }}" />
+          </div>
           <div class="content">
             {{ page.content }}
-          </div>
-        </article>
-      </div>
-      <div class="col-3">
-        {% include categories.html %}
-      </div>
-    </div>
-
-    <div class="container">
-      <div class="row">
-        <div class="col-12">
-          <div class="try">
-            <h2>Ready to try?</h2>
-            <p>Join the thousands of people already using Monica to enhance the quality of their social relationships.</p>
-            <p class="cta">
-              <a href="https://app.monicahq.com" class="btn btn-primary btn-large">Sign up for Monica</a>
-            </p>
           </div>
         </div>
       </div>
     </div>
-
   </div>
-
-</main>
+</div>
