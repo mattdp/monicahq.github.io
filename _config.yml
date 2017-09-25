@@ -23,9 +23,12 @@ url: "https://monicahq.com" # the base hostname & protocol for your site, e.g. h
 twitter_username: monicahq
 github_username:  monicahq
 permalink: none
+highlighter: rouge
 
 # Build settings
 markdown: kramdown
+sass:
+  style: compressed
 gems:
   - jekyll-feed
   - jekyll-sitemap

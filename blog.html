@@ -1,51 +1,45 @@
 ---
-layout: default
+layout: homepage
 ---
 
-<main class="blog">
+<div class="blog">
+  <main class="fix-blue">
+    <div class="pt-3 pt-sm-3 mb-5">
+      {% include menu.html %}
+    </div>
+  </main>
 
   <div class="container">
     <div class="row">
-      <div class="col-12">
-        <div class="blog-header">
-          <h2>Our blog</h2>
-          <ul class="horizontal">
-            <li>
-              <a href="https://twitter.com/MonicaHQ_app">Follow Monica on Twitter</a>
-            </li>
-            <li>
-              <a href="https://tinyletter.com/monicahq">Subscribe to the newsletter</a>
-            </li>
-          </ul>
-        </div>
+      <div class="col">
+        <h2 class="text-center font-weight-normal mb-5">Our blog</h2>
       </div>
     </div>
-
     <div class="row">
-      <div class="col-9">
-
-        {% for post in site.posts %}
+      {% for post in site.posts %}
+      <div class="col-12 col-sm-6 mb-5">
         <article>
-          <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
-          <p class="article-metadata">
-            <span class="date">Written {{ post.date | date: '%B %d, %Y' }}.</span>
-            <span class="category">Flagged under
-              <a href="{{ post.tag_for_seo | prepend: '/category/' | prepend: site.baseurl | prepend: site.url }}">
-                {{ post.tags }}
-              </a>
-            </span>
-          </p>
-          <div class="content">
-            {{ post.content }}
+          <div class="article-image">
+            <img src="{{ post.date | date: '%Y-%m-%d' | append: '_small.jpeg' | prepend: '/assets/img/posts/' | prepend: site.baseurl | prepend: site.url }}" alt="Image" />
+            <a href="{{ site.baseurl }}{{ post.url }}" itemprop="url"></a>
+          </div>
+          <div class="article-excerpt px-4 py-4">
+            <h3 class="font-weight-normal"><a href="{{ post.url }}">{{ post.title }}</a></h3>
+            <p class="article-metadata">
+              <span class="date">Written {{ post.date | date: '%B %d, %Y' }}.</span>
+              <span class="category">Flagged under
+                <a href="{{ post.tag_for_seo | prepend: '/category/' | prepend: site.baseurl | prepend: site.url }}">
+                  {{ post.tags }}
+                </a>
+              </span>
+            </p>
+            <div class="content">
+              <p>{{ post.excerpt | strip_html | truncatewords: 40 }}</p>
+            </div>
           </div>
         </article>
-        {% endfor %}
-
       </div>
-      <div class="col-3">
-        {% include categories.html %}
-      </div>
+      {% endfor %}
     </div>
   </div>
-
-</main>
+</div>
