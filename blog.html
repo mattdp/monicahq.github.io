@@ -20,7 +20,7 @@ layout: homepage
       <div class="col-12 col-sm-6 mb-5">
         <article>
           <div class="article-image">
-            <img src="{{ post.date | date: '%Y-%m-%d' | append: '_small.jpeg' | prepend: '/assets/img/posts/' | prepend: site.baseurl | prepend: site.url }}" />
+            <img src="{{ post.date | date: '%Y-%m-%d' | append: '_small.jpeg' | prepend: '/assets/img/posts/' | prepend: site.baseurl | prepend: site.url }}" alt="Image" />
             <a href="{{ site.baseurl }}{{ post.url }}" itemprop="url"></a>
           </div>
           <div class="article-excerpt px-4 py-4">
