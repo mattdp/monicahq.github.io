@@ -55,6 +55,8 @@ GEM
       jekyll (~> 3.3)
     jekyll-sitemap (1.1.1)
       jekyll (~> 3.3)
+    jekyll-toc (0.3.0)
+      nokogiri (~> 1.6)
     jekyll-watch (1.5.0)
       listen (~> 3.0, < 3.1)
     kramdown (1.15.0)
@@ -109,6 +111,7 @@ DEPENDENCIES
   jekyll-picture-tag
   jekyll-seo-tag
   jekyll-sitemap
+  jekyll-toc
   liquid_reading_time
   rake
   tzinfo-data

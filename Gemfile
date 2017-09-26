@@ -18,6 +18,7 @@ gem 'liquid_reading_time'
 gem 'jekyll-email-protect'
 gem 'rake'
 gem 'jekyll-last-modified-at'
+gem 'jekyll-toc'
 
 # If you want to use GitHub Pages, remove the "gem "jekyll"" above and
 # uncomment the line below. To upgrade, run `bundle update github-pages`.

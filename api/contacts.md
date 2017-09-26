@@ -1,8 +1,10 @@
 ---
 layout: api
+toc: true
+title: Contacts
 ---
 
-# Overview
+## Overview
 
 The Contact object is the core of what Monica is all about. The API allows you
 to create, delete and update your contacts. You can retrieve individual contacts
@@ -28,14 +30,14 @@ A `partial` contact has the flag `is_partial` set to `true`.
 
 ## List all your contacts
 
-<pre>
+<url>
   GET /contacts/
-</pre>
+</url>
 
 ### Parameters
 
 | Name | Type | Description |
-| ---- |:-----------:|:-----------:|
+| ---- | ----------- | ----------- |
 | limit | integer | Indicates the page size. |
 | page | integer | Indicates the page to return. |
 
@@ -214,9 +216,9 @@ A `partial` contact has the flag `is_partial` set to `true`.
 
 ## Get a specific contact
 
-<pre>
+<url>
   GET /contacts/:id
-</pre>
+</url>
 
 {% highlight json %}
 {
@@ -372,16 +374,16 @@ A `partial` contact has the flag `is_partial` set to `true`.
 
 ## Create a contact
 
-<pre>
+<url>
   POST /contacts/
-</pre>
+</url>
 
 ### Input
 
 If a field is not required, you can send the `null` value as the content of the field.
 
 | Name | Type | Description |
-| ---- |:-----------:|:-----------:|
+| ---- | ----------- | ----------- |
 | first_name | string | <strong>Required</strong>. The first name of the contact. Max 50 characters. |
 | last_name | string | Last name of the contact. Max 100 characters. |
 | gender | string | <strong>Required</strong>. The gender of the contact. Can be `male`, `female` or `unknown`. |
@@ -523,14 +525,14 @@ The API call returns a contact object if the call succeeds.
 
 ## Update a contact
 
-<pre>
+<url>
   PUT /contacts/:id
-</pre>
+</url>
 
 ### Input
 
 | Name | Type | Description |
-| ---- |:-----------:|:-----------:|
+| ---- | ----------- | ----------- |
 | first_name | string | <strong>Required</strong>. The first name of the contact. Max 50 characters. |
 | last_name | string | Last name of the contact. Max 100 characters. |
 | gender | string | <strong>Required</strong>. The gender of the contact. Can be `male`, `female` or `unknown`. |
@@ -670,15 +672,17 @@ The API call returns a contact object if the call succeeds.
 
 ## Delete a contact
 
-<pre>
+<url>
   DELETE /contacts/:id
-</pre>
+</url>
 
 ### Response
 
 The response sends back the id that was just deleted.
 
+{% highlight json %}
 {
   "deleted": true,
   "id": 93135
 }
+{% endhighlight %}
