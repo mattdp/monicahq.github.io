@@ -179,7 +179,30 @@ A `partial` contact has the flag `is_partial` set to `true`.
           }
         ]
       },
-      "tags": [],
+      "tags": [
+        {
+          "id": 856,
+          "object": "tag",
+          "name": "friend",
+          "name_slug": "friend",
+          "account": {
+            "id": 1
+          },
+          "created_at": "2017-09-26 20:51:59",
+          "updated_at": "2017-09-26T20:51:59Z"
+        },
+        {
+          "id": 857,
+          "object": "tag",
+          "name": "college",
+          "name_slug": "college",
+          "account": {
+            "id": 1
+          },
+          "created_at": "2017-09-26 20:51:59",
+          "updated_at": "2017-09-26T20:51:59Z"
+        }
+      ],
       "data": {
         "number_of_calls": 0,
         "number_of_notes": 1,
@@ -505,7 +528,30 @@ The API call returns a contact object if the call succeeds.
       }
     ]
   },
-  "tags": [],
+  "tags": [
+    {
+      "id": 856,
+      "object": "tag",
+      "name": "friend",
+      "name_slug": "friend",
+      "account": {
+        "id": 1
+      },
+      "created_at": "2017-09-26 20:51:59",
+      "updated_at": "2017-09-26T20:51:59Z"
+    },
+    {
+      "id": 857,
+      "object": "tag",
+      "name": "college",
+      "name_slug": "college",
+      "account": {
+        "id": 1
+      },
+      "created_at": "2017-09-26 20:51:59",
+      "updated_at": "2017-09-26T20:51:59Z"
+    }
+  ],
   "data": {
     "number_of_calls": 0,
     "number_of_notes": 0,
