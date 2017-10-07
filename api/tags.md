@@ -26,7 +26,6 @@ which you can group contacts who belong together.
 
 {% highlight json %}
 {
-{
   "data": [
     {
       "id": 325,

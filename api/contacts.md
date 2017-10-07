@@ -28,6 +28,10 @@ own contact sheet and shouldn't have one.
 
 A `partial` contact has the flag `is_partial` set to `true`.
 
+When creating `real` contacts, the only rule is the uniquness of the email
+address in the user's account. If you try to use the same email address when
+creating another contact in the account, the API will return an error.
+
 ## List all your contacts
 
 <url>
