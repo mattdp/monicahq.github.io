@@ -7,7 +7,10 @@ title: Notes
 ## Overview
 
 The Note object allows to associate notes to contacts. A note has to be
-associated with an existing contact.
+associated with an existing contact - it can't be orphan.
+
+When retrieving a note, we always also return some basic information about the
+related contact.
 
 ## List all the notes in your account
 
@@ -28,64 +31,73 @@ associated with an existing contact.
 {
   "data": [
     {
-      "id": 325,
-      "object": "tag",
-      "name": "ami",
-      "name_slug": "ami",
+      "id": 4724,
+      "object": "note",
+      "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. Donec ut libero sed arcu vehicula ultricies a non tortor.",
       "account": {
         "id": 1
       },
-      "created_at": "2017-07-19T21:00:07Z",
-      "updated_at": "2017-07-19T21:00:07Z"
+      "contact": {
+        "id": {
+          "id": 1,
+          "object": "contact",
+          "first_name": "Usher",
+          "last_name": "Misste",
+          "gender": "male",
+          "is_partial": false,
+          "information": {
+            "dates": [
+              {
+                "name": "birthdate",
+                "is_birthdate_approximate": "exact",
+                "birthdate": "1983-10-23T19:10:42Z"
+              }
+            ]
+          },
+          "account": {
+            "id": 1
+          }
+        }
+      },
+      "created_at": "2017-10-07T09:00:35Z",
+      "updated_at": "2017-10-07T09:00:35Z"
     },
     {
-      "id": 857,
-      "object": "tag",
-      "name": "college",
-      "name_slug": "college",
+      "id": 4725,
+      "object": "note",
+      "body": "I should definitely see her more often, this is sad that I don't see her more often.",
       "account": {
         "id": 1
       },
-      "created_at": "2017-09-26T20:51:59Z",
-      "updated_at": "2017-09-26T20:51:59Z"
-    },
-    {
-      "id": 1,
-      "object": "tag",
-      "name": "collegue",
-      "name_slug": "collegue",
-      "account": {
-        "id": 1
+      "contact": {
+        "id": {
+          "id": 1,
+          "object": "contact",
+          "first_name": "Henri",
+          "last_name": "Troyat",
+          "gender": "female",
+          "is_partial": false,
+          "information": {
+            "dates": [
+              {
+                "name": "birthdate",
+                "is_birthdate_approximate": "exact",
+                "birthdate": "1983-10-23T19:10:42Z"
+              }
+            ]
+          },
+          "account": {
+            "id": 1
+          }
+        }
       },
-      "created_at": "2017-07-04T22:15:03Z",
-      "updated_at": "2017-07-04T22:15:03Z"
-    },
-    {
-      "id": 322,
-      "object": "tag",
-      "name": "eglise",
-      "name_slug": "eglise",
-      "account": {
-        "id": 1
-      },
-      "created_at": "2017-07-19T19:49:54Z",
-      "updated_at": "2017-07-19T19:49:54Z"
-    },
-    {
-      "id": 856,
-      "object": "tag",
-      "name": "friend",
-      "name_slug": "friend",
-      "account": {
-        "id": 1
-      },
-      "created_at": "2017-09-26T20:51:59Z",
-      "updated_at": "2017-09-26T20:51:59Z"
+      "created_at": "2017-10-07T15:28:22Z",
+      "updated_at": "2017-10-07T15:28:22Z"
     }
   ],
   "links": {
-    "first": "https://app.monicahq.com/api/tags?page=1",
-    "last": "https://app.monicahq.com/api/tags?page=1",
+    "first": "https://app.monicahq.com/api/contacts/1/notes?page=1",
+    "last": "https://app.monicahq.com/api/contacts/1/notes?page=1",
     "prev": null,
     "next": null
   },
@@ -93,56 +105,75 @@ associated with an existing contact.
     "current_page": 1,
     "from": 1,
     "last_page": 1,
-    "path": "https://app.monicahq.com/api/tags",
+    "path": "https://app.monicahq.com/api/contacts/1/notes",
     "per_page": 10,
-    "to": 5,
-    "total": 5
+    "to": 2,
+    "total": 2
   }
 }
 {% endhighlight %}
 
-## Get a specific tag
+## Get a specific note
 
 <url>
-  GET /tags/:id
+  GET /notes/:id
 </url>
 
 {% highlight json %}
 {
- {
   "data": {
-    "id": 1,
-    "object": "tag",
-    "name": "collegue",
-    "name_slug": "collegue",
+    "id": 4724,
+    "object": "note",
+    "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. Donec ut libero sed arcu vehicula ultricies a non tortor.",
     "account": {
       "id": 1
     },
-    "created_at": "2017-07-04T22:15:03Z",
-    "updated_at": "2017-07-04T22:15:03Z"
+    "contact": {
+      "id": {
+        "id": 1,
+        "object": "contact",
+        "first_name": "Henri",
+        "last_name": "Troyat",
+        "gender": "female",
+        "is_partial": false,
+        "information": {
+          "dates": [
+            {
+              "name": "birthdate",
+              "is_birthdate_approximate": "exact",
+              "birthdate": "1983-10-23T19:10:42Z"
+            }
+          ]
+        },
+        "account": {
+          "id": 1
+        }
+      }
+    },
+    "created_at": "2017-10-07T09:00:35Z",
+    "updated_at": "2017-10-07T09:00:35Z"
   }
 }
 {% endhighlight %}
 
-## Create a tag
+## Create a note
 
 <url>
-  POST /tags/
+  POST /notes/
 </url>
 
 ### Input
 
-If a field is not required, you can send the `null` value as the content of the field.
-
 | Name | Type | Description |
 | ---- | ----------- | ----------- |
-| name | string | <strong>Required</strong>. The name of the tag. Max 255 characters. |
+| body | string | <strong>Required</strong>. The body of the note. Max 100000 characters. |
 
 ### Example
 
 {% highlight json %}
 {
-  "name":"friends"
+  "body": "This is a sample of a note.",
+  "contact_id": "1"
 }
 {% endhighlight %}
 

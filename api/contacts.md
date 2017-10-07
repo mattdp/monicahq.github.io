@@ -28,7 +28,7 @@ own contact sheet and shouldn't have one.
 
 A `partial` contact has the flag `is_partial` set to `true`.
 
-When creating `real` contacts, the only rule is the uniquness of the email
+When creating `real` contacts, the only rule is the uniqueness of the email
 address in the user's account. If you try to use the same email address when
 creating another contact in the account, the API will return an error.
 
@@ -516,9 +516,9 @@ The API call returns a contact object if the call succeeds.
       }
     ],
     "social_network": {
-      "facebook_profile_url": "https:\/\/facebook.com\/johndoe",
-      "twitter_profile_url": "https:\/\/twitter.com\/johndoe",
-      "linkedin_profile_url": "https:\/\/linkedin.com\/johndoe"
+      "facebook_profile_url": "https://facebook.com/johndoe",
+      "twitter_profile_url": "https://twitter.com/johndoe",
+      "linkedin_profile_url": "https://linkedin.com/johndoe"
     },
     "addresses": [
       {
@@ -686,9 +686,9 @@ The API call returns a contact object if the call succeeds.
       }
     ],
     "social_network": {
-      "facebook_profile_url": "https:\/\/facebook.com\/johndoe",
-      "twitter_profile_url": "https:\/\/twitter.com\/johndoe",
-      "linkedin_profile_url": "https:\/\/linkedin.com\/johndoe"
+      "facebook_profile_url": "https://facebook.com/johndoe",
+      "twitter_profile_url": "https://twitter.com/johndoe",
+      "linkedin_profile_url": "https://linkedin.com/johndoe"
     },
     "addresses": [
       {

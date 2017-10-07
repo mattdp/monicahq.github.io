@@ -109,7 +109,6 @@ which you can group contacts who belong together.
 
 {% highlight json %}
 {
- {
   "data": {
     "id": 1,
     "object": "tag",
@@ -148,7 +147,7 @@ If a field is not required, you can send the `null` value as the content of the 
 
 ### Response
 
-The API call returns a contact object if the call succeeds.
+The API call returns a tag object if the call succeeds.
 
 {% highlight json %}
 {
