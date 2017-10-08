@@ -38,25 +38,23 @@ related contact.
         "id": 1
       },
       "contact": {
-        "id": {
-          "id": 1,
-          "object": "contact",
-          "first_name": "Usher",
-          "last_name": "Misste",
-          "gender": "male",
-          "is_partial": false,
-          "information": {
-            "dates": [
-              {
-                "name": "birthdate",
-                "is_birthdate_approximate": "exact",
-                "birthdate": "1983-10-23T19:10:42Z"
-              }
-            ]
-          },
-          "account": {
-            "id": 1
-          }
+        "id": 1,
+        "object": "contact",
+        "first_name": "Usher",
+        "last_name": "Misste",
+        "gender": "male",
+        "is_partial": false,
+        "information": {
+          "dates": [
+            {
+              "name": "birthdate",
+              "is_birthdate_approximate": "exact",
+              "birthdate": "1983-10-23T19:10:42Z"
+            }
+          ]
+        },
+        "account": {
+          "id": 1
         }
       },
       "created_at": "2017-10-07T09:00:35Z",
@@ -70,25 +68,113 @@ related contact.
         "id": 1
       },
       "contact": {
-        "id": {
-          "id": 1,
-          "object": "contact",
-          "first_name": "Henri",
-          "last_name": "Troyat",
-          "gender": "female",
-          "is_partial": false,
-          "information": {
-            "dates": [
-              {
-                "name": "birthdate",
-                "is_birthdate_approximate": "exact",
-                "birthdate": "1983-10-23T19:10:42Z"
-              }
-            ]
-          },
-          "account": {
-            "id": 1
-          }
+        "id": 1,
+        "object": "contact",
+        "first_name": "Henri",
+        "last_name": "Troyat",
+        "gender": "female",
+        "is_partial": false,
+        "information": {
+          "dates": [
+            {
+              "name": "birthdate",
+              "is_birthdate_approximate": "exact",
+              "birthdate": "1983-10-23T19:10:42Z"
+            }
+          ]
+        },
+        "account": {
+          "id": 1
+        }
+      },
+      "created_at": "2017-10-07T15:28:22Z",
+      "updated_at": "2017-10-07T15:28:22Z"
+    }
+  ],
+  "links": {
+    "first": "https://app.monicahq.com/api/contacts/1/notes?page=1",
+    "last": "https://app.monicahq.com/api/contacts/1/notes?page=1",
+    "prev": null,
+    "next": null
+  },
+  "meta": {
+    "current_page": 1,
+    "from": 1,
+    "last_page": 1,
+    "path": "https://app.monicahq.com/api/contacts/1/notes",
+    "per_page": 10,
+    "to": 2,
+    "total": 2
+  }
+}
+{% endhighlight %}
+
+## List all the notes of a specific contact
+
+<url>
+  GET /contacts/:id/notes
+</url>
+
+### Response
+
+{% highlight json %}
+{
+  "data": [
+    {
+      "id": 4724,
+      "object": "note",
+      "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. Donec ut libero sed arcu vehicula ultricies a non tortor.",
+      "account": {
+        "id": 1
+      },
+      "contact": {
+        "id": 1,
+        "object": "contact",
+        "first_name": "Usher",
+        "last_name": "Misste",
+        "gender": "male",
+        "is_partial": false,
+        "information": {
+          "dates": [
+            {
+              "name": "birthdate",
+              "is_birthdate_approximate": "exact",
+              "birthdate": "1983-10-23T19:10:42Z"
+            }
+          ]
+        },
+        "account": {
+          "id": 1
+        }
+      },
+      "created_at": "2017-10-07T09:00:35Z",
+      "updated_at": "2017-10-07T09:00:35Z"
+    },
+    {
+      "id": 4725,
+      "object": "note",
+      "body": "I should definitely see her more often, this is sad that I don't see her more often.",
+      "account": {
+        "id": 1
+      },
+      "contact": {
+        "id": 1,
+        "object": "contact",
+        "first_name": "Henri",
+        "last_name": "Troyat",
+        "gender": "female",
+        "is_partial": false,
+        "information": {
+          "dates": [
+            {
+              "name": "birthdate",
+              "is_birthdate_approximate": "exact",
+              "birthdate": "1983-10-23T19:10:42Z"
+            }
+          ]
+        },
+        "account": {
+          "id": 1
         }
       },
       "created_at": "2017-10-07T15:28:22Z",
@@ -119,6 +205,8 @@ related contact.
   GET /notes/:id
 </url>
 
+### Response
+
 {% highlight json %}
 {
   "data": {
@@ -129,25 +217,23 @@ related contact.
       "id": 1
     },
     "contact": {
-      "id": {
-        "id": 1,
-        "object": "contact",
-        "first_name": "Henri",
-        "last_name": "Troyat",
-        "gender": "female",
-        "is_partial": false,
-        "information": {
-          "dates": [
-            {
-              "name": "birthdate",
-              "is_birthdate_approximate": "exact",
-              "birthdate": "1983-10-23T19:10:42Z"
-            }
-          ]
-        },
-        "account": {
-          "id": 1
-        }
+      "id": 1,
+      "object": "contact",
+      "first_name": "Henri",
+      "last_name": "Troyat",
+      "gender": "female",
+      "is_partial": false,
+      "information": {
+        "dates": [
+          {
+            "name": "birthdate",
+            "is_birthdate_approximate": "exact",
+            "birthdate": "1983-10-23T19:10:42Z"
+          }
+        ]
+      },
+      "account": {
+        "id": 1
       }
     },
     "created_at": "2017-10-07T09:00:35Z",
@@ -167,6 +253,7 @@ related contact.
 | Name | Type | Description |
 | ---- | ----------- | ----------- |
 | body | string | <strong>Required</strong>. The body of the note. Max 100000 characters. |
+| contact_id | integer | <strong>Required</strong>. The ID of the contact that the note is associated with. |
 
 ### Example
 
@@ -179,41 +266,62 @@ related contact.
 
 ### Response
 
-The API call returns a contact object if the call succeeds.
+The API call returns a note object if the call succeeds.
 
 {% highlight json %}
 {
   "data": {
-    "id": 1,
-    "object": "tag",
-    "name": "friends",
-    "name_slug": "friends",
+    "id": 4724,
+    "object": "note",
+    "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. Donec ut libero sed arcu vehicula ultricies a non tortor.",
     "account": {
       "id": 1
     },
-    "created_at": "2017-07-04T22:15:03Z",
-    "updated_at": "2017-07-04T22:15:03Z"
+    "contact": {
+      "id": 1,
+      "object": "contact",
+      "first_name": "Henri",
+      "last_name": "Troyat",
+      "gender": "female",
+      "is_partial": false,
+      "information": {
+        "dates": [
+          {
+            "name": "birthdate",
+            "is_birthdate_approximate": "exact",
+            "birthdate": "1983-10-23T19:10:42Z"
+          }
+        ]
+      },
+      "account": {
+        "id": 1
+      }
+    },
+    "created_at": "2017-10-07T09:00:35Z",
+    "updated_at": "2017-10-07T09:00:35Z"
   }
 }
 {% endhighlight %}
 
-## Update a tag
+## Update a note
 
 <url>
-  PUT /tags/:id
+  PUT /notes/:id
 </url>
 
 ### Input
 
 | Name | Type | Description |
 | ---- | ----------- | ----------- |
-| name | string | <strong>Required</strong>. The name of the tag. Max 255 characters. |
+| body | string | <strong>Required</strong>. The body of the note. Max 100000 characters. |
+| contact_id | integer | <strong>Required</strong>. The ID of the contact that the note is associated with. |
 
 ### Example
 
 {% highlight json %}
 {
-  "name":"prison"
+  "body": "This is a test that is updated",
+  "contact_id": 3
 }
 {% endhighlight %}
 
@@ -222,23 +330,42 @@ The API call returns a contact object if the call succeeds.
 {% highlight json %}
 {
   "data": {
-    "id": 1,
-    "object": "tag",
-    "name": "prison",
-    "name_slug": "prison",
+    "id": 4724,
+    "object": "note",
+    "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. Donec ut libero sed arcu vehicula ultricies a non tortor.",
     "account": {
       "id": 1
     },
-    "created_at": "2017-07-04T22:15:03Z",
-    "updated_at": "2017-07-04T22:15:03Z"
+    "contact": {
+      "id": 1,
+      "object": "contact",
+      "first_name": "Henri",
+      "last_name": "Troyat",
+      "gender": "female",
+      "is_partial": false,
+      "information": {
+        "dates": [
+          {
+            "name": "birthdate",
+            "is_birthdate_approximate": "exact",
+            "birthdate": "1983-10-23T19:10:42Z"
+          }
+        ]
+      },
+      "account": {
+        "id": 1
+      }
+    },
+    "created_at": "2017-10-07T09:00:35Z",
+    "updated_at": "2017-10-07T09:00:35Z"
   }
 }
 {% endhighlight %}
 
-## Delete a tag
+## Delete a note
 
 <url>
-  DELETE /tags/:id
+  DELETE /notes/:id
 </url>
 
 ### Response
