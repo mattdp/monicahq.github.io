@@ -509,17 +509,21 @@ The API call returns an Activity object if the call succeeds.
 
 | Name | Type | Description |
 | ---- | ----------- | ----------- |
-| content | string | <strong>Required</strong>. The description of the call. Max 100000 characters. |
+| summary | string | <strong>Required</strong>. A short description of the activity. Max 255 characters. |
+| description | string | An optional comment to add more details on what happened. Max 1000000 characters. |
+| date_it_happened | date | <strong>Required</strong>. The date the event happened. Can be in the past or future - the latter being dumb, but well. |
+| activity_type_id | integer | The ID of the type of activity that the activity is associated with. |
 | contact_id | integer | <strong>Required</strong>. The ID of the contact that the call is associated with. |
-| called_at | date | <strong>Required</strong>. The date the called happened. Can be in the past or future - the latter being dumb, but well. |
 
 ### Example
 
 {% highlight json %}
 {
-  "content": "He called, we had fun and really awesome.",
-  "contact_id": 3,
-  "called_at": "2018-02-02"
+  "summary": "We ate at an awesome restaurant.",
+  "description": "We ate way too much, we had fun and we promised we'd see each other again in a couple of weeks.",
+  "date_it_happened": "2018-02-02",
+  "activity_type_id": 2,
+  "contact_id": 3
 }
 {% endhighlight %}
 
@@ -528,19 +532,29 @@ The API call returns an Activity object if the call succeeds.
 {% highlight json %}
 {
   "data": {
-    "id": 5,
-    "object": "call",
-    "called_at": "2017-10-07T22:29:21Z",
-    "content": "He called, we had fun and really awesome.",
+    "id": 4204,
+    "object": "activity",
+    "summary": "We ate at an awesome restaurant.",
+    "description": "We ate way too much, we had fun and we promised we'd see each other again in a couple of weeks.",
+    "date_it_happened": "2018-02-02T00:00:00Z",
+    "activity_type": {
+      "id": 2,
+      "object": "activityType",
+      "type": "watched_movie_at_home",
+      "group": "simple_activities",
+      "location_type": "my_place",
+      "created_at": "2017-01-17T17:06:34Z",
+      "updated_at": "2017-01-17T17:06:34Z"
+    },
     "account": {
-      "id": 5
+      "id": 1
     },
     "contact": {
       "id": 3,
       "object": "contact",
-      "first_name": "Leslie",
-      "last_name": "Knope",
-      "gender": "none",
+      "first_name": "David",
+      "last_name": "Olagnier",
+      "gender": "male",
       "is_partial": false,
       "information": {
         "dates": [
@@ -552,19 +566,19 @@ The API call returns an Activity object if the call succeeds.
         ]
       },
       "account": {
-        "id": 5
+        "id": 1
       }
     },
-    "created_at": "2017-10-07T22:29:21Z",
-    "updated_at": "2017-10-07T22:29:56Z"
+    "created_at": "2017-10-09T14:31:54Z",
+    "updated_at": "2017-10-09T14:31:54Z"
   }
 }
 {% endhighlight %}
 
-## Delete a call
+## Delete an activity
 
 <url>
-  DELETE /calls/:id
+  DELETE /activities/:id
 </url>
 
 ### Response
@@ -575,5 +589,144 @@ The response sends back the id that was just deleted.
 {
   "deleted": true,
   "id": 31
+}
+{% endhighlight %}
+
+
+## List of all activity types
+
+An activity can optionally be associated with an activity type, like
+"restaurant" or "talked at home". At the moment, it's not possible to create
+custom activity types, but this feature will eventually be implemented. Activity
+types are a bit useless at the moment, but we'll use them to display to a user
+what kind of activities he's doing with his contacts.
+
+<url>
+  GET /activitytypes
+</url>
+
+### Response
+
+{% highlight json %}
+{
+  "data": [
+    {
+      "id": 1,
+      "object": "activityType",
+      "type": "just_hung_out",
+      "group": "simple_activities",
+      "location_type": "outside",
+      "created_at": "2017-01-17T17:06:34Z",
+      "updated_at": "2017-01-17T17:06:34Z"
+    },
+    {
+      "id": 2,
+      "object": "activityType",
+      "type": "watched_movie_at_home",
+      "group": "simple_activities",
+      "location_type": "my_place",
+      "created_at": "2017-01-17T17:06:34Z",
+      "updated_at": "2017-01-17T17:06:34Z"
+    },
+    {
+      "id": 3,
+      "object": "activityType",
+      "type": "talked_at_home",
+      "group": "simple_activities",
+      "location_type": "my_place",
+      "created_at": "2017-01-17T17:06:34Z",
+      "updated_at": "2017-01-17T17:06:34Z"
+    },
+    {
+      "id": 4,
+      "object": "activityType",
+      "type": "did_sport_activities_together",
+      "group": "sport",
+      "location_type": "outside",
+      "created_at": "2017-01-17T17:06:34Z",
+      "updated_at": "2017-01-17T17:06:34Z"
+    },
+    {
+      "id": 5,
+      "object": "activityType",
+      "type": "ate_at_his_place",
+      "group": "food",
+      "location_type": "his_place",
+      "created_at": "2017-01-17T17:06:34Z",
+      "updated_at": "2017-01-17T17:06:34Z"
+    },
+    {
+      "id": 6,
+      "object": "activityType",
+      "type": "went_bar",
+      "group": "food",
+      "location_type": "outside",
+      "created_at": "2017-01-17T17:06:34Z",
+      "updated_at": "2017-01-17T17:06:34Z"
+    },
+    {
+      "id": 7,
+      "object": "activityType",
+      "type": "ate_at_home",
+      "group": "food",
+      "location_type": "my_place",
+      "created_at": "2017-01-17T17:06:34Z",
+      "updated_at": "2017-01-17T17:06:34Z"
+    },
+    {
+      "id": 8,
+      "object": "activityType",
+      "type": "picknicked",
+      "group": "food",
+      "location_type": "outside",
+      "created_at": "2017-01-17T17:06:34Z",
+      "updated_at": "2017-01-17T17:06:34Z"
+    },
+    {
+      "id": 9,
+      "object": "activityType",
+      "type": "ate_restaurant",
+      "group": "food",
+      "location_type": "outside",
+      "created_at": "2017-01-17T17:06:34Z",
+      "updated_at": "2017-01-17T17:06:34Z"
+    },
+    {
+      "id": 10,
+      "object": "activityType",
+      "type": "went_theater",
+      "group": "cultural_activities",
+      "location_type": "outside",
+      "created_at": "2017-01-17T17:06:34Z",
+      "updated_at": "2017-01-17T17:06:34Z"
+    },
+    {
+      "id": 11,
+      "object": "activityType",
+      "type": "went_concert",
+      "group": "cultural_activities",
+      "location_type": "outside",
+      "created_at": "2017-01-17T17:06:34Z",
+      "updated_at": "2017-01-17T17:06:34Z"
+    },
+    {
+      "id": 12,
+      "object": "activityType",
+      "type": "went_play",
+      "group": "cultural_activities",
+      "location_type": "outside",
+      "created_at": "2017-01-17T17:06:34Z",
+      "updated_at": "2017-01-17T17:06:34Z"
+    },
+    {
+      "id": 13,
+      "object": "activityType",
+      "type": "went_museum",
+      "group": "cultural_activities",
+      "location_type": "outside",
+      "created_at": "2017-01-17T17:06:34Z",
+      "updated_at": "2017-01-17T17:06:34Z"
+    }
+  ]
 }
 {% endhighlight %}
