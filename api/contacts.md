@@ -1,8 +1,10 @@
 ---
 layout: api
+toc: true
+title: Contacts
 ---
 
-# Overview
+## Overview
 
 The Contact object is the core of what Monica is all about. The API allows you
 to create, delete and update your contacts. You can retrieve individual contacts
@@ -26,16 +28,20 @@ own contact sheet and shouldn't have one.
 
 A `partial` contact has the flag `is_partial` set to `true`.
 
+When creating `real` contacts, the only rule is the uniqueness of the email
+address in the user's account. If you try to use the same email address when
+creating another contact in the account, the API will return an error.
+
 ## List all your contacts
 
-<pre>
+<url>
   GET /contacts/
-</pre>
+</url>
 
 ### Parameters
 
 | Name | Type | Description |
-| ---- |:-----------:|:-----------:|
+| ---- | ----------- | ----------- |
 | limit | integer | Indicates the page size. |
 | page | integer | Indicates the page to return. |
 
@@ -177,7 +183,30 @@ A `partial` contact has the flag `is_partial` set to `true`.
           }
         ]
       },
-      "tags": [],
+      "tags": [
+        {
+          "id": 856,
+          "object": "tag",
+          "name": "friend",
+          "name_slug": "friend",
+          "account": {
+            "id": 1
+          },
+          "created_at": "2017-09-26 20:51:59",
+          "updated_at": "2017-09-26T20:51:59Z"
+        },
+        {
+          "id": 857,
+          "object": "tag",
+          "name": "college",
+          "name_slug": "college",
+          "account": {
+            "id": 1
+          },
+          "created_at": "2017-09-26 20:51:59",
+          "updated_at": "2017-09-26T20:51:59Z"
+        }
+      ],
       "data": {
         "number_of_calls": 0,
         "number_of_notes": 1,
@@ -214,9 +243,9 @@ A `partial` contact has the flag `is_partial` set to `true`.
 
 ## Get a specific contact
 
-<pre>
+<url>
   GET /contacts/:id
-</pre>
+</url>
 
 {% highlight json %}
 {
@@ -372,16 +401,16 @@ A `partial` contact has the flag `is_partial` set to `true`.
 
 ## Create a contact
 
-<pre>
+<url>
   POST /contacts/
-</pre>
+</url>
 
 ### Input
 
 If a field is not required, you can send the `null` value as the content of the field.
 
 | Name | Type | Description |
-| ---- |:-----------:|:-----------:|
+| ---- | ----------- | ----------- |
 | first_name | string | <strong>Required</strong>. The first name of the contact. Max 50 characters. |
 | last_name | string | Last name of the contact. Max 100 characters. |
 | gender | string | <strong>Required</strong>. The gender of the contact. Can be `male`, `female` or `unknown`. |
@@ -487,9 +516,9 @@ The API call returns a contact object if the call succeeds.
       }
     ],
     "social_network": {
-      "facebook_profile_url": "https:\/\/facebook.com\/johndoe",
-      "twitter_profile_url": "https:\/\/twitter.com\/johndoe",
-      "linkedin_profile_url": "https:\/\/linkedin.com\/johndoe"
+      "facebook_profile_url": "https://facebook.com/johndoe",
+      "twitter_profile_url": "https://twitter.com/johndoe",
+      "linkedin_profile_url": "https://linkedin.com/johndoe"
     },
     "addresses": [
       {
@@ -503,7 +532,30 @@ The API call returns a contact object if the call succeeds.
       }
     ]
   },
-  "tags": [],
+  "tags": [
+    {
+      "id": 856,
+      "object": "tag",
+      "name": "friend",
+      "name_slug": "friend",
+      "account": {
+        "id": 1
+      },
+      "created_at": "2017-09-26 20:51:59",
+      "updated_at": "2017-09-26T20:51:59Z"
+    },
+    {
+      "id": 857,
+      "object": "tag",
+      "name": "college",
+      "name_slug": "college",
+      "account": {
+        "id": 1
+      },
+      "created_at": "2017-09-26 20:51:59",
+      "updated_at": "2017-09-26T20:51:59Z"
+    }
+  ],
   "data": {
     "number_of_calls": 0,
     "number_of_notes": 0,
@@ -523,14 +575,14 @@ The API call returns a contact object if the call succeeds.
 
 ## Update a contact
 
-<pre>
+<url>
   PUT /contacts/:id
-</pre>
+</url>
 
 ### Input
 
 | Name | Type | Description |
-| ---- |:-----------:|:-----------:|
+| ---- | ----------- | ----------- |
 | first_name | string | <strong>Required</strong>. The first name of the contact. Max 50 characters. |
 | last_name | string | Last name of the contact. Max 100 characters. |
 | gender | string | <strong>Required</strong>. The gender of the contact. Can be `male`, `female` or `unknown`. |
@@ -634,9 +686,9 @@ The API call returns a contact object if the call succeeds.
       }
     ],
     "social_network": {
-      "facebook_profile_url": "https:\/\/facebook.com\/johndoe",
-      "twitter_profile_url": "https:\/\/twitter.com\/johndoe",
-      "linkedin_profile_url": "https:\/\/linkedin.com\/johndoe"
+      "facebook_profile_url": "https://facebook.com/johndoe",
+      "twitter_profile_url": "https://twitter.com/johndoe",
+      "linkedin_profile_url": "https://linkedin.com/johndoe"
     },
     "addresses": [
       {
@@ -670,15 +722,17 @@ The API call returns a contact object if the call succeeds.
 
 ## Delete a contact
 
-<pre>
+<url>
   DELETE /contacts/:id
-</pre>
+</url>
 
 ### Response
 
 The response sends back the id that was just deleted.
 
+{% highlight json %}
 {
   "deleted": true,
   "id": 93135
 }
+{% endhighlight %}

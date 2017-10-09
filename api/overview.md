@@ -1,8 +1,10 @@
 ---
 layout: api
+toc: true
+title: General concept
 ---
 
-# Overview
+## Overview
 
 This document describes how to use Monica's API. This document is heavily
 inspired by [GitHub's](https://developer.github.com/v3) and
@@ -33,9 +35,9 @@ X-RateLimit-Remaining: 58
 
 All timestamps return in ISO 8601 format:
 
-<pre>
+<url>
 YYYY-MM-DDTHH:MM:SSZ
-</pre>
+</url>
 
 ## HTTP verbs
 
@@ -43,7 +45,7 @@ Monica tries to use the appropriate HTTP verbs wherever it can. Note that the
 `PATCH` HTTP verb is not used right now.
 
 | Verb | Description |
-| ---- |:-----------:|
+| ---- | ----------- |
 | GET | Used for retrieving resources. |
 | POST | Used for creating resources. |
 | PUT | Used for replacing resources or collections. |
@@ -58,9 +60,9 @@ You can specify further pages with the `?page` parameter. For some resources,
 you can also set a custom page size up to 100 with the `?limit` parameter.
 Omitting the `?page` parameter will return the first page.
 
-<call>
+<url>
 curl 'https://app.monicahq.com/api/contacts?page=2&limit=100'
-</call>
+</url>
 
 ## Rate limiting
 
@@ -73,7 +75,7 @@ X-RateLimit-Remaining: 58
 {% endhighlight %}
 
 | Header name | Description |
-| ----------- |:-----------:|
+| ----------- | ----------- |
 | X-RateLimit-Limit | The maximum number of requests you're permitted to make per hour. |
 | X-RateLimit-Remaining | The number of requests remaining in the current rate limit window. |
 

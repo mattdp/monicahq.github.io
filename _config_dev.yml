@@ -26,7 +26,7 @@ permalink: none
 
 # Build settings
 markdown: kramdown
-gems:
+plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-paginate
@@ -34,6 +34,8 @@ gems:
   - liquid_reading_time
   - jekyll-email-protect
   - jekyll-last-modified-at
+  - jekyll-toc
+
 exclude:
   - Gemfile
   - Gemfile.lock
