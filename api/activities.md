@@ -592,7 +592,6 @@ The response sends back the id that was just deleted.
 }
 {% endhighlight %}
 
-
 ## List of all activity types
 
 An activity can optionally be associated with an activity type, like

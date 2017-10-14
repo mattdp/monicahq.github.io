@@ -325,7 +325,7 @@ related contact.
 | ---- | ----------- | ----------- |
 | content | string | <strong>Required</strong>. The description of the call. Max 100000 characters. |
 | contact_id | integer | <strong>Required</strong>. The ID of the contact that the call is associated with. |
-| called_at | date | <strong>Required</strong>. The date the called happened. Can be in the past or future - the latter being dumb, but well. |
+| called_at | date | <strong>Required</strong>. The date the call happened. Can be in the past or future - the latter being dumb, but well. |
 
 ### Example
 
