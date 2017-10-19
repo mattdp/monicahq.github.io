@@ -31,13 +31,13 @@ sass:
   style: compressed
 plugins:
   - jekyll-feed
-  - jekyll-sitemap
   - jekyll-paginate
   - jekyll-seo-tag
   - liquid_reading_time
   - jekyll-email-protect
   - jekyll-last-modified-at
   - jekyll-toc
+  - jekyll-sitemap
 
 exclude:
   - Gemfile
