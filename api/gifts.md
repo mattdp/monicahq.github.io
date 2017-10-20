@@ -380,7 +380,7 @@ related contact.
 
 {% highlight json %}
 {
-  "is_for": 3,
+  "is_for": 1,
   "name":"For my friend Ron Swanson",
   "comment":"This is going to be so awesome",
   "url":"https://www.amazon.ca/Culturenik-182-390-Recreation-Swanson-Pyramid/dp/B00UTPTOHG/ref=sr_1_1?ie=UTF8&qid=1508272877&sr=8-1&keywords=ron+swanson",
@@ -397,7 +397,68 @@ related contact.
 The API gift returns a gift object if the gift succeeds.
 
 {% highlight json %}
-
+{
+  "data": {
+    "id": 676,
+    "object": "gift",
+    "is_for": {
+      "id": 1,
+      "object": "contact",
+      "first_name": "Henri",
+      "last_name": "Troyat",
+      "gender": "male",
+      "is_partial": false,
+      "information": {
+        "dates": [
+          {
+            "name": "birthdate",
+            "is_birthdate_approximate": "unknown",
+            "birthdate": null
+          }
+        ]
+      },
+      "account": {
+        "id": 1
+      }
+    },
+    "name": "For my friend Ron Swanson",
+    "comment": "This is going to be so awesome",
+    "url": "https:\/\/www.amazon.ca\/Culturenik-182-390-Recreation-Swanson-Pyramid\/dp\/B00UTPTOHG\/ref=sr_1_1?ie=UTF8&qid=1508272877&sr=8-1&keywords=ron+swanson",
+    "value": "291",
+    "is_an_idea": false,
+    "has_been_offered": true,
+    "date_offered": {
+      "date": "2015-02-24 00:00:00.000000",
+      "timezone_type": 3,
+      "timezone": "US\/Eastern"
+    },
+    "account": {
+      "id": 1
+    },
+    "contact": {
+      "id": 3,
+      "object": "contact",
+      "first_name": "David",
+      "last_name": "Olsdwaer",
+      "gender": "male",
+      "is_partial": false,
+      "information": {
+        "dates": [
+          {
+            "name": "birthdate",
+            "is_birthdate_approximate": "unknown",
+            "birthdate": null
+          }
+        ]
+      },
+      "account": {
+        "id": 1
+      }
+    },
+    "created_at": "2017-10-19T21:51:15Z",
+    "updated_at": "2017-10-19T21:51:15Z"
+  }
+}
 {% endhighlight %}
 
 ## Update a gift
@@ -423,13 +484,65 @@ The API gift returns a gift object if the gift succeeds.
 ### Example
 
 {% highlight json %}
-
+{
+  "is_for": null,
+  "name":"For my friend Ron Swanson",
+  "comment":"This is going to be so awesome",
+  "url":"https://www.amazon.ca/Culturenik-182-390-Recreation-Swanson-Pyramid/dp/B00UTPTOHG/ref=sr_1_1?ie=UTF8&qid=1508272877&sr=8-1&keywords=ron+swanson",
+  "value":"293",
+  "is_an_idea":0,
+  "has_been_offered":1,
+  "date_offered":"2015-02-24",
+  "contact_id": 3
+}
 {% endhighlight %}
 
 ### Response
 
 {% highlight json %}
-
+{
+  "data": {
+    "id": 678,
+    "object": "gift",
+    "is_for": null,
+    "name": "For my friend Ron Swanson",
+    "comment": "This is going to be so awesome",
+    "url": "https:\/\/www.amazon.ca\/Culturenik-182-390-Recreation-Swanson-Pyramid\/dp\/B00UTPTOHG\/ref=sr_1_1?ie=UTF8&qid=1508272877&sr=8-1&keywords=ron+swanson",
+    "value": "293",
+    "is_an_idea": false,
+    "has_been_offered": true,
+    "date_offered": {
+      "date": "2015-02-24 00:00:00.000000",
+      "timezone_type": 3,
+      "timezone": "US\/Eastern"
+    },
+    "account": {
+      "id": 1
+    },
+    "contact": {
+      "id": 3,
+      "object": "contact",
+      "first_name": "David",
+      "last_name": "Olsdwaer",
+      "gender": "male",
+      "is_partial": false,
+      "information": {
+        "dates": [
+          {
+            "name": "birthdate",
+            "is_birthdate_approximate": "unknown",
+            "birthdate": null
+          }
+        ]
+      },
+      "account": {
+        "id": 1
+      }
+    },
+    "created_at": "2017-10-19T21:52:53Z",
+    "updated_at": "2017-10-19T21:52:53Z"
+  }
+}
 {% endhighlight %}
 
 ## Delete a gift
