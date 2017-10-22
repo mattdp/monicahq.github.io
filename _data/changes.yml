@@ -1,3 +1,7 @@
+- date: 2017-10-21
+  list-changes:
+      - change: Add ability to add an activity to multiple people at the same time.
+
 - date: 2017-08-15
   list-changes:
       - change: Add support for Markdown on Notes and Log Calls.
