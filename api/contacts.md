@@ -243,6 +243,8 @@ creating another contact in the account, the API will return an error.
 
 ## Get a specific contact
 
+### Get a `real` contact
+
 <url>
   GET /contacts/:id
 </url>
@@ -399,6 +401,44 @@ creating another contact in the account, the API will return an error.
 }
 {% endhighlight %}
 
+### Get a `partial` contact
+
+Partial contacts are partners or children.
+
+<url>
+  GET /contacts/:id
+</url>
+
+{% highlight json %}
+{
+  "data": {
+    "id": 79172,
+    "object": "contact",
+    "first_name": "Héloïse",
+    "last_name": null,
+    "gender": "female",
+    "is_partial": true,
+    "information": {
+      "dates": [
+        {
+          "name": "birthdate",
+          "is_birthdate_approximate": "exact",
+          "birthdate": "2011-11-22T02:21:49Z"
+        }
+      ],
+      "avatar": {
+        "gravatar_url": false
+      }
+    },
+    "account": {
+      "id": 1
+    },
+    "created_at": "2017-05-30T02:21:49Z",
+    "updated_at": "2017-05-30T02:21:49Z"
+  }
+}
+{% endhighlight %}
+
 ## Create a contact
 
 <url>
@@ -430,6 +470,7 @@ If a field is not required, you can send the `null` value as the content of the 
 | facebook_profile_url | string | The Facebook URL of the contact. Max 255 characters. |
 | twitter_profile_url | string | The Twitter URL of the contact. Max 255 characters. |
 | linkedin_profile_url | string | The LinkedIn URL of the contact. Max 255 characters. |
+| is_partial | integer | <strong>Required</strong>. Indicates whether a contact is `real` or `partial`. Can be `0` (false) or `1` (true). |
 
 ### Example
 
@@ -453,7 +494,8 @@ If a field is not required, you can send the `null` value as the content of the 
   "food_preferencies":"Fish and fresh potatoes.",
   "facebook_profile_url":"https://facebook.com/johndoe",
   "twitter_profile_url":"https://twitter.com/johndoe",
-  "linkedin_profile_url":"https://linkedin.com/johndoe"
+  "linkedin_profile_url":"https://linkedin.com/johndoe",
+  "is_partial":0
 }
 {% endhighlight %}
 
@@ -602,6 +644,7 @@ The API call returns a contact object if the call succeeds.
 | facebook_profile_url | string | The Facebook URL of the contact. Max 255 characters. |
 | twitter_profile_url | string | The Twitter URL of the contact. Max 255 characters. |
 | linkedin_profile_url | string | The LinkedIn URL of the contact. Max 255 characters. |
+| is_partial | integer | <strong>Required</strong>. Indicates whether a contact is `real` or `partial`. Can be `0` (false) or `1` (true). |
 
 ### Example
 
@@ -625,7 +668,8 @@ The API call returns a contact object if the call succeeds.
   "food_preferencies":"Fish and fresh potatoes.",
   "facebook_profile_url":"https://facebook.com/johndoe",
   "twitter_profile_url":"https://twitter.com/johndoe",
-  "linkedin_profile_url":"https://linkedin.com/johndoe"
+  "linkedin_profile_url":"https://linkedin.com/johndoe",
+  "is_partial":0
 }
 {% endhighlight %}
 
@@ -736,3 +780,104 @@ The response sends back the id that was just deleted.
   "id": 93135
 }
 {% endhighlight %}
+
+## Partners
+
+Each contact can have one or multiple partners (even if polygamy is somewhat
+forbidden in some countries, well...). A partner can be either a `real` contact
+or a `partial` contact. Before being able to associate two contacts together,
+both contacts need to exist in the database. In practice, you don't need to
+worry about the concept of  when you do create the relationship.
+
+When you define a relationship, only one call is necessary to link the two
+contacts together.
+
+### Link a partner with a contact
+
+<url>
+  POST /contacts/:id/partners
+</url>
+
+#### Input
+
+| Name | Type | Description |
+| ---- | ----------- | ----------- |
+| partner_id | integer | <strong>Required</strong>. The ID of the contact ID that will be set as the partner of the given contact. |
+
+{% highlight json %}
+{
+  "partner_id":2
+}
+{% endhighlight %}
+
+This call returns a standard Contact object.
+
+### Unlink a partner with a contact
+
+<url>
+  POST /contacts/:id/partners/unset
+</url>
+
+#### Input
+
+| Name | Type | Description |
+| ---- | ----------- | ----------- |
+| partner_id | integer | <strong>Required</strong>. The ID of the contact ID that needs to be unset. |
+
+{% highlight json %}
+{
+  "partner_id":2
+}
+{% endhighlight %}
+
+This call returns a standard Contact object.
+
+## Children
+
+Each contact can have one or multiple children. A child can be either a `real` contact
+or a `partial` contact. Before being able to associate two contacts together,
+both contacts need to exist in the database. In practice, you don't need to
+worry about the concept of  when you do create the relationship.
+
+When you define a relationship, only one call is necessary to link the two
+contacts together.
+
+### Link a child to a contact
+
+<url>
+  POST /contacts/:id/kids
+</url>
+
+#### Input
+
+| Name | Type | Description |
+| ---- | ----------- | ----------- |
+| child_id | integer | <strong>Required</strong>. The ID of the contact ID that will be set as the partner of the given contact. |
+
+{% highlight json %}
+{
+  "child_id":2
+}
+{% endhighlight %}
+
+This call returns a standard Contact object.
+
+### Unlink a partner with a contact
+
+<url>
+  POST /contacts/:id/kids/unset
+</url>
+
+#### Input
+
+| Name | Type | Description |
+| ---- | ----------- | ----------- |
+| child_id | integer | <strong>Required</strong>. The ID of the contact ID that needs to be unset. |
+
+{% highlight json %}
+{
+  "child_id":2
+}
+{% endhighlight %}
+
+This call returns a standard Contact object.
