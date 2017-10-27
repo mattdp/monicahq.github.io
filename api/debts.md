@@ -133,8 +133,8 @@ contact owns money to the user, `in_debt` will be `no`.
     }
   ],
   "links": {
-    "first": "http:\/\/monica.app\/api\/debts?page=1",
-    "last": "http:\/\/monica.app\/api\/debts?page=1",
+    "first": "https:\/\/app.monicahq.com\/api\/debts?page=1",
+    "last": "https:\/\/app.monicahq.com\/api\/debts?page=1",
     "prev": null,
     "next": null
   },
@@ -142,7 +142,7 @@ contact owns money to the user, `in_debt` will be `no`.
     "current_page": 1,
     "from": 1,
     "last_page": 1,
-    "path": "http:\/\/monica.app\/api\/debts",
+    "path": "https:\/\/app.monicahq.com\/api\/debts",
     "per_page": 10,
     "to": 3,
     "total": 3

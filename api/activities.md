@@ -6,12 +6,12 @@ title: Activities
 
 ## Overview
 
-The Activity object represents activities made with the contact. Use it to keep
-track of what you've done. An activity can't be orphan - it needs to be linked
-to a contact.
+The Activity object represents activities made with one or more contacts. Use it
+to keep track of what you've done. An activity can't be orphan - it needs to be
+linked to at least one contact.
 
 When retrieving an activity, we always also return some basic information about
-the related contact.
+the related contact(s).
 
 ## List all the activities in your account
 
@@ -34,7 +34,7 @@ the related contact.
     {
       "id": 1,
       "object": "activity",
-      "summary": "Tennis and restaurant",
+      "summary": "",
       "description": "On a mangé avec papi et mamie au restaurant indien.",
       "date_it_happened": "2016-10-04T07:59:14Z",
       "activity_type": {
@@ -46,28 +46,33 @@ the related contact.
         "created_at": "2017-01-17T17:06:34Z",
         "updated_at": "2017-01-17T17:06:34Z"
       },
+      "attendees": {
+        "total": 1,
+        "contacts": [
+          {
+            "id": 1,
+            "object": "contact",
+            "first_name": "Henri",
+            "last_name": "Troyat",
+            "gender": "female",
+            "is_partial": false,
+            "information": {
+              "dates": [
+                {
+                  "name": "birthdate",
+                  "is_birthdate_approximate": "exact",
+                  "birthdate": "1983-10-23T19:10:42Z"
+                }
+              ]
+            },
+            "account": {
+              "id": 1
+            }
+          }
+        ]
+      },
       "account": {
         "id": 1
-      },
-      "contact": {
-        "id": 1,
-        "object": "contact",
-        "first_name": "Henri",
-        "last_name": "Troyat",
-        "gender": "female",
-        "is_partial": false,
-        "information": {
-          "dates": [
-            {
-              "name": "birthdate",
-              "is_birthdate_approximate": "exact",
-              "birthdate": "1983-10-23T19:10:42Z"
-            }
-          ]
-        },
-        "account": {
-          "id": 1
-        }
       },
       "created_at": "2016-10-07T11:59:14Z",
       "updated_at": "2017-05-03T01:42:28Z"
@@ -87,28 +92,33 @@ the related contact.
         "created_at": "2017-01-17T17:06:34Z",
         "updated_at": "2017-01-17T17:06:34Z"
       },
+      "attendees": {
+        "total": 1,
+        "contacts": [
+          {
+            "id": 8,
+            "object": "contact",
+            "first_name": "Jim",
+            "last_name": "Halpert",
+            "gender": "male",
+            "is_partial": false,
+            "information": {
+              "dates": [
+                {
+                  "name": "birthdate",
+                  "is_birthdate_approximate": "exact",
+                  "birthdate": "1978-10-01T16:20:55Z"
+                }
+              ]
+            },
+            "account": {
+              "id": 1
+            }
+          }
+        ]
+      },
       "account": {
         "id": 1
-      },
-      "contact": {
-        "id": 8,
-        "object": "contact",
-        "first_name": "Jim",
-        "last_name": "Halpert",
-        "gender": "male",
-        "is_partial": false,
-        "information": {
-          "dates": [
-            {
-              "name": "birthdate",
-              "is_birthdate_approximate": "exact",
-              "birthdate": "1978-10-01T16:20:55Z"
-            }
-          ]
-        },
-        "account": {
-          "id": 1
-        }
       },
       "created_at": "2016-10-18T23:58:18Z",
       "updated_at": "2017-06-07T13:09:47Z"
@@ -116,7 +126,7 @@ the related contact.
     {
       "id": 42,
       "object": "activity",
-      "summary": "Squash",
+      "summary": "",
       "description": null,
       "date_it_happened": "2017-02-18T23:59:47Z",
       "activity_type": {
@@ -128,72 +138,160 @@ the related contact.
         "created_at": "2017-01-17T17:06:34Z",
         "updated_at": "2017-01-17T17:06:34Z"
       },
+      "attendees": {
+        "total": 1,
+        "contacts": [
+          {
+            "id": 1,
+            "object": "contact",
+            "first_name": "Henri",
+            "last_name": "Troyat",
+            "gender": "female",
+            "is_partial": false,
+            "information": {
+              "dates": [
+                {
+                  "name": "birthdate",
+                  "is_birthdate_approximate": "exact",
+                  "birthdate": "1983-10-23T19:10:42Z"
+                }
+              ]
+            },
+            "account": {
+              "id": 1
+            }
+          }
+        ]
+      },
       "account": {
         "id": 1
-      },
-      "contact": {
-        "id": 1,
-        "object": "contact",
-        "first_name": "Henri",
-        "last_name": "Troyat",
-        "gender": "female",
-        "is_partial": false,
-        "information": {
-          "dates": [
-            {
-              "name": "birthdate",
-              "is_birthdate_approximate": "exact",
-              "birthdate": "1983-10-23T19:10:42Z"
-            }
-          ]
-        },
-        "account": {
-          "id": 1
-        }
       },
       "created_at": "2017-02-18T23:59:47Z",
       "updated_at": "2017-02-18T23:59:47Z"
     },
     {
-      "id": 4203,
+      "id": 4667,
       "object": "activity",
-      "summary": "Recognize",
-      "description": "",
-      "date_it_happened": "2017-10-08T00:00:00Z",
-      "activity_type": {
-        "id": 1,
-        "object": "activityType",
-        "type": "just_hung_out",
-        "group": "simple_activities",
-        "location_type": "outside",
-        "created_at": "2017-01-17T17:06:34Z",
-        "updated_at": "2017-01-17T17:06:34Z"
+      "summary": "Theater",
+      "description": "We had such an incredible time doing all this.",
+      "date_it_happened": "2017-10-25T00:00:00Z",
+      "activity_type": null,
+      "attendees": {
+        "total": 3,
+        "contacts": [
+          {
+            "id": 7,
+            "object": "contact",
+            "first_name": "Alexandre",
+            "last_name": "Trioi",
+            "gender": "male",
+            "is_partial": false,
+            "information": {
+              "dates": [
+                {
+                  "name": "birthdate",
+                  "is_birthdate_approximate": "unknown",
+                  "birthdate": null
+                }
+              ]
+            },
+            "account": {
+              "id": 1
+            }
+          },
+          {
+            "id": 1,
+            "object": "contact",
+            "first_name": "Henri",
+            "last_name": "Troyat",
+            "gender": "female",
+            "is_partial": false,
+            "information": {
+              "dates": [
+                {
+                  "name": "birthdate",
+                  "is_birthdate_approximate": "exact",
+                  "birthdate": "1983-10-23T19:10:42Z"
+                }
+              ]
+            },
+            "account": {
+              "id": 1
+            }
+          },
+          {
+            "id": 79120,
+            "object": "contact",
+            "first_name": "Cecelia Marie",
+            "last_name": null,
+            "gender": "female",
+            "is_partial": true,
+            "information": {
+              "dates": [
+                {
+                  "name": "birthdate",
+                  "is_birthdate_approximate": "approximate",
+                  "birthdate": "2013-01-01T23:55:58Z"
+                }
+              ]
+            },
+            "account": {
+              "id": 1
+            }
+          }
+        ]
       },
       "account": {
         "id": 1
       },
-      "contact": {
-        "id": 1,
-        "object": "contact",
-        "first_name": "Henri",
-        "last_name": "Troyat",
-        "gender": "female",
-        "is_partial": false,
-        "information": {
-          "dates": [
-            {
-              "name": "birthdate",
-              "is_birthdate_approximate": "exact",
-              "birthdate": "1983-10-23T19:10:42Z"
-            }
-          ]
-        },
-        "account": {
-          "id": 1
-        }
+      "created_at": "2017-10-25T11:12:20Z",
+      "updated_at": "2017-10-25T11:12:20Z"
+    },
+    {
+      "id": 4669,
+      "object": "activity",
+      "summary": "We ate at an awesome restaurant.",
+      "description": "We ate way too much, we had fun and we promised we'd see each other again in a couple of weeks.",
+      "date_it_happened": "2018-02-02T00:00:00Z",
+      "activity_type": {
+        "id": 2,
+        "object": "activityType",
+        "type": "watched_movie_at_home",
+        "group": "simple_activities",
+        "location_type": "my_place",
+        "created_at": "2017-01-17T17:06:34Z",
+        "updated_at": "2017-01-17T17:06:34Z"
       },
-      "created_at": "2017-10-08T22:06:40Z",
-      "updated_at": "2017-10-08T22:06:40Z"
+      "attendees": {
+        "total": 1,
+        "contacts": [
+          {
+            "id": 1,
+            "object": "contact",
+            "first_name": "Henri",
+            "last_name": "Troyat",
+            "gender": "female",
+            "is_partial": false,
+            "information": {
+              "dates": [
+                {
+                  "name": "birthdate",
+                  "is_birthdate_approximate": "exact",
+                  "birthdate": "1983-10-23T19:10:42Z"
+                }
+              ]
+            },
+            "account": {
+              "id": 1
+            }
+          }
+        ]
+      },
+      "account": {
+        "id": 1
+      },
+      "created_at": "2017-10-25T11:44:49Z",
+      "updated_at": "2017-10-25T11:44:49Z"
     }
   ],
   "links": {
@@ -208,8 +306,8 @@ the related contact.
     "last_page": 1,
     "path": "https:\/\/app.monicahq.com\/api\/activities",
     "per_page": 10,
-    "to": 4,
-    "total": 4
+    "to": 5,
+    "total": 5
   }
 }
 {% endhighlight %}
@@ -226,52 +324,11 @@ the related contact.
 {
   "data": [
     {
-      "id": 1,
+      "id": 2,
       "object": "activity",
-      "summary": "Tennis and restaurant",
-      "description": "On a mangé avec papi et mamie au restaurant indien.",
-      "date_it_happened": "2016-10-04T07:59:14Z",
-      "activity_type": {
-        "id": 9,
-        "object": "activityType",
-        "type": "ate_restaurant",
-        "group": "food",
-        "location_type": "outside",
-        "created_at": "2017-01-17T17:06:34Z",
-        "updated_at": "2017-01-17T17:06:34Z"
-      },
-      "account": {
-        "id": 1
-      },
-      "contact": {
-        "id": 1,
-        "object": "contact",
-        "first_name": "Henri",
-        "last_name": "Troyat",
-        "gender": "female",
-        "is_partial": false,
-        "information": {
-          "dates": [
-            {
-              "name": "birthdate",
-              "is_birthdate_approximate": "exact",
-              "birthdate": "1983-10-23T19:10:42Z"
-            }
-          ]
-        },
-        "account": {
-          "id": 1
-        }
-      },
-      "created_at": "2016-10-07T11:59:14Z",
-      "updated_at": "2017-05-03T01:42:28Z"
-    },
-    {
-      "id": 42,
-      "object": "activity",
-      "summary": "Squash",
-      "description": null,
-      "date_it_happened": "2017-02-18T23:59:47Z",
+      "summary": "Lunch with Dwight",
+      "description": "We play handball and it was just awesome. He told me about a new girl he likes Cathy Simms, so he has to be careful.",
+      "date_it_happened": "2016-10-18T13:09:47Z",
       "activity_type": {
         "id": 4,
         "object": "activityType",
@@ -281,77 +338,41 @@ the related contact.
         "created_at": "2017-01-17T17:06:34Z",
         "updated_at": "2017-01-17T17:06:34Z"
       },
-      "account": {
-        "id": 1
-      },
-      "contact": {
-        "id": 1,
-        "object": "contact",
-        "first_name": "Henri",
-        "last_name": "Troyat",
-        "gender": "female",
-        "is_partial": false,
-        "information": {
-          "dates": [
-            {
-              "name": "birthdate",
-              "is_birthdate_approximate": "exact",
-              "birthdate": "1983-10-23T19:10:42Z"
+      "attendees": {
+        "total": 1,
+        "contacts": [
+          {
+            "id": 8,
+            "object": "contact",
+            "first_name": "Jim",
+            "last_name": "Halpert",
+            "gender": "male",
+            "is_partial": false,
+            "information": {
+              "dates": [
+                {
+                  "name": "birthdate",
+                  "is_birthdate_approximate": "exact",
+                  "birthdate": "1978-10-01T16:20:55Z"
+                }
+              ]
+            },
+            "account": {
+              "id": 1
             }
-          ]
-        },
-        "account": {
-          "id": 1
-        }
-      },
-      "created_at": "2017-02-18T23:59:47Z",
-      "updated_at": "2017-02-18T23:59:47Z"
-    },
-    {
-      "id": 4203,
-      "object": "activity",
-      "summary": "Recognize",
-      "description": "",
-      "date_it_happened": "2017-10-08T00:00:00Z",
-      "activity_type": {
-        "id": 1,
-        "object": "activityType",
-        "type": "just_hung_out",
-        "group": "simple_activities",
-        "location_type": "outside",
-        "created_at": "2017-01-17T17:06:34Z",
-        "updated_at": "2017-01-17T17:06:34Z"
+          }
+        ]
       },
       "account": {
         "id": 1
       },
-      "contact": {
-        "id": 1,
-        "object": "contact",
-        "first_name": "Henri",
-        "last_name": "Troyat",
-        "gender": "female",
-        "is_partial": false,
-        "information": {
-          "dates": [
-            {
-              "name": "birthdate",
-              "is_birthdate_approximate": "exact",
-              "birthdate": "1983-10-23T19:10:42Z"
-            }
-          ]
-        },
-        "account": {
-          "id": 1
-        }
-      },
-      "created_at": "2017-10-08T22:06:40Z",
-      "updated_at": "2017-10-08T22:06:40Z"
+      "created_at": "2016-10-18T23:58:18Z",
+      "updated_at": "2017-06-07T13:09:47Z"
     }
   ],
   "links": {
-    "first": "https:\/\/app.monicahq.com\/api\/activities?page=1",
-    "last": "https:\/\/app.monicahq.com\/api\/activities?page=1",
+    "first": "https:\/\/app.monicahq.com\/api\/contacts\/8\/activities?page=1",
+    "last": "https:\/\/app.monicahq.com\/api\/contacts\/8\/activities?page=1",
     "prev": null,
     "next": null
   },
@@ -359,10 +380,10 @@ the related contact.
     "current_page": 1,
     "from": 1,
     "last_page": 1,
-    "path": "https:\/\/app.monicahq.com\/api\/activities",
+    "path": "https:\/\/app.monicahq.com\/api\/contacts\/8\/activities",
     "per_page": 10,
-    "to": 3,
-    "total": 3
+    "to": 1,
+    "total": 1
   }
 }
 {% endhighlight %}
@@ -392,28 +413,33 @@ the related contact.
       "created_at": "2017-01-17T17:06:34Z",
       "updated_at": "2017-01-17T17:06:34Z"
     },
+    "attendees": {
+      "total": 1,
+      "contacts": [
+        {
+          "id": 8,
+          "object": "contact",
+          "first_name": "Jim",
+          "last_name": "Halpert",
+          "gender": "male",
+          "is_partial": false,
+          "information": {
+            "dates": [
+              {
+                "name": "birthdate",
+                "is_birthdate_approximate": "exact",
+                "birthdate": "1978-10-01T16:20:55Z"
+              }
+            ]
+          },
+          "account": {
+            "id": 1
+          }
+        }
+      ]
+    },
     "account": {
       "id": 1
-    },
-    "contact": {
-      "id": 8,
-      "object": "contact",
-      "first_name": "Jim",
-      "last_name": "Halpert",
-      "gender": "male",
-      "is_partial": false,
-      "information": {
-        "dates": [
-          {
-            "name": "birthdate",
-            "is_birthdate_approximate": "exact",
-            "birthdate": "1978-10-01T16:20:55Z"
-          }
-        ]
-      },
-      "account": {
-        "id": 1
-      }
     },
     "created_at": "2016-10-18T23:58:18Z",
     "updated_at": "2017-06-07T13:09:47Z"
@@ -435,7 +461,7 @@ the related contact.
 | description | string | An optional comment to add more details on what happened. Max 1000000 characters. |
 | date_it_happened | date | <strong>Required</strong>. The date the event happened. Can be in the past or future - the latter being dumb, but well. |
 | activity_type_id | integer | The ID of the type of activity that the activity is associated with. |
-| contact_id | integer | <strong>Required</strong>. The ID of the contact that the call is associated with. |
+| contacts | array | <strong>Required</strong>. The ID of the contact(s) that the call is associated with. |
 
 ### Example
 
@@ -445,7 +471,7 @@ the related contact.
   "description": "We ate way too much, we had fun and we promised we'd see each other again in a couple of weeks.",
   "date_it_happened": "2018-02-02",
   "activity_type_id": 2,
-  "contact_id": 3
+  "contacts": [1,3,5]
 }
 {% endhighlight %}
 
@@ -456,7 +482,7 @@ The API call returns an Activity object if the call succeeds.
 {% highlight json %}
 {
   "data": {
-    "id": 4204,
+    "id": 4670,
     "object": "activity",
     "summary": "We ate at an awesome restaurant.",
     "description": "We ate way too much, we had fun and we promised we'd see each other again in a couple of weeks.",
@@ -470,31 +496,76 @@ The API call returns an Activity object if the call succeeds.
       "created_at": "2017-01-17T17:06:34Z",
       "updated_at": "2017-01-17T17:06:34Z"
     },
+    "attendees": {
+      "total": 3,
+      "contacts": [
+        {
+          "id": 1,
+          "object": "contact",
+          "first_name": "Henri",
+          "last_name": "Troyat",
+          "gender": "female",
+          "is_partial": false,
+          "information": {
+            "dates": [
+              {
+                "name": "birthdate",
+                "is_birthdate_approximate": "exact",
+                "birthdate": "1983-10-23T19:10:42Z"
+              }
+            ]
+          },
+          "account": {
+            "id": 1
+          }
+        },
+        {
+          "id": 2,
+          "object": "contact",
+          "first_name": "Nicolas",
+          "last_name": "Loriu",
+          "gender": "male",
+          "is_partial": false,
+          "information": {
+            "dates": [
+              {
+                "name": "birthdate",
+                "is_birthdate_approximate": "unknown",
+                "birthdate": null
+              }
+            ]
+          },
+          "account": {
+            "id": 1
+          }
+        },
+        {
+          "id": 7,
+          "object": "contact",
+          "first_name": "Alexandre",
+          "last_name": "Loap",
+          "gender": "male",
+          "is_partial": false,
+          "information": {
+            "dates": [
+              {
+                "name": "birthdate",
+                "is_birthdate_approximate": "unknown",
+                "birthdate": null
+              }
+            ]
+          },
+          "account": {
+            "id": 1
+          }
+        }
+      ]
+    },
     "account": {
       "id": 1
     },
-    "contact": {
-      "id": 3,
-      "object": "contact",
-      "first_name": "David",
-      "last_name": "Olagnier",
-      "gender": "male",
-      "is_partial": false,
-      "information": {
-        "dates": [
-          {
-            "name": "birthdate",
-            "is_birthdate_approximate": "unknown",
-            "birthdate": null
-          }
-        ]
-      },
-      "account": {
-        "id": 1
-      }
-    },
-    "created_at": "2017-10-09T14:31:54Z",
-    "updated_at": "2017-10-09T14:31:54Z"
+    "created_at": "2017-10-25T12:46:55Z",
+    "updated_at": "2017-10-25T12:46:55Z"
   }
 }
 {% endhighlight %}
@@ -513,7 +584,7 @@ The API call returns an Activity object if the call succeeds.
 | description | string | An optional comment to add more details on what happened. Max 1000000 characters. |
 | date_it_happened | date | <strong>Required</strong>. The date the event happened. Can be in the past or future - the latter being dumb, but well. |
 | activity_type_id | integer | The ID of the type of activity that the activity is associated with. |
-| contact_id | integer | <strong>Required</strong>. The ID of the contact that the call is associated with. |
+| contacts | array | <strong>Required</strong>. The ID of the contact(s) that the call is associated with. |
 
 ### Example
 
@@ -523,7 +594,7 @@ The API call returns an Activity object if the call succeeds.
   "description": "We ate way too much, we had fun and we promised we'd see each other again in a couple of weeks.",
   "date_it_happened": "2018-02-02",
   "activity_type_id": 2,
-  "contact_id": 3
+  "contacts": [1,3]
 }
 {% endhighlight %}
 
@@ -532,7 +603,7 @@ The API call returns an Activity object if the call succeeds.
 {% highlight json %}
 {
   "data": {
-    "id": 4204,
+    "id": 4670,
     "object": "activity",
     "summary": "We ate at an awesome restaurant.",
     "description": "We ate way too much, we had fun and we promised we'd see each other again in a couple of weeks.",
@@ -546,31 +617,56 @@ The API call returns an Activity object if the call succeeds.
       "created_at": "2017-01-17T17:06:34Z",
       "updated_at": "2017-01-17T17:06:34Z"
     },
+    "attendees": {
+      "total": 2,
+      "contacts": [
+        {
+          "id": 1,
+          "object": "contact",
+          "first_name": "Henri",
+          "last_name": "Troyat",
+          "gender": "female",
+          "is_partial": false,
+          "information": {
+            "dates": [
+              {
+                "name": "birthdate",
+                "is_birthdate_approximate": "exact",
+                "birthdate": "1983-10-23T19:10:42Z"
+              }
+            ]
+          },
+          "account": {
+            "id": 1
+          }
+        },
+        {
+          "id": 3,
+          "object": "contact",
+          "first_name": "David",
+          "last_name": "Calir",
+          "gender": "male",
+          "is_partial": false,
+          "information": {
+            "dates": [
+              {
+                "name": "birthdate",
+                "is_birthdate_approximate": "unknown",
+                "birthdate": null
+              }
+            ]
+          },
+          "account": {
+            "id": 1
+          }
+        }
+      ]
+    },
     "account": {
       "id": 1
     },
-    "contact": {
-      "id": 3,
-      "object": "contact",
-      "first_name": "David",
-      "last_name": "Olagnier",
-      "gender": "male",
-      "is_partial": false,
-      "information": {
-        "dates": [
-          {
-            "name": "birthdate",
-            "is_birthdate_approximate": "unknown",
-            "birthdate": null
-          }
-        ]
-      },
-      "account": {
-        "id": 1
-      }
-    },
-    "created_at": "2017-10-09T14:31:54Z",
-    "updated_at": "2017-10-09T14:31:54Z"
+    "created_at": "2017-10-25T12:46:55Z",
+    "updated_at": "2017-10-25T12:46:55Z"
   }
 }
 {% endhighlight %}

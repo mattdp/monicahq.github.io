@@ -52,8 +52,8 @@ diary.
     }
   ],
   "links": {
-    "first": "http:\/\/monica.app\/api\/journal?page=1",
-    "last": "http:\/\/monica.app\/api\/journal?page=1",
+    "first": "https:\/\/app.monicahq.com\/api\/journal?page=1",
+    "last": "https:\/\/app.monicahq.com\/api\/journal?page=1",
     "prev": null,
     "next": null
   },
@@ -61,7 +61,7 @@ diary.
     "current_page": 1,
     "from": 1,
     "last_page": 1,
-    "path": "http:\/\/monica.app\/api\/journal",
+    "path": "https:\/\/app.monicahq.com\/api\/journal",
     "per_page": 10,
     "to": 2,
     "total": 2
